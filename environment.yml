@@ -1,0 +1,8 @@
+name: marchantia_hhdb
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python=3.9
+  - hhsuite=3.3.0
+  - parallel  # for batch_query.sh

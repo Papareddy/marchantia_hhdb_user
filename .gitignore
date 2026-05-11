@@ -1,0 +1,7 @@
+db/
+*.tar.gz
+*.tar.gz.md5
+results/
+*.hhr
+*.a3m
+.snakemake/
