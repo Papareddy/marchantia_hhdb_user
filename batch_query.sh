@@ -4,18 +4,20 @@
 # Plus an aggregate summary: <outdir>/SUMMARY.tsv + <outdir>/SUMMARY.pdf
 #
 # Usage:
-#   ./batch_query.sh <input_dir> <output_dir> [PARALLEL_JOBS]
+#   ./batch_query.sh <input> <output_dir> [PARALLEL_JOBS]
 #
-# Inputs: one .fa or .fasta per protein in <input_dir>/.
-#         (Multi-FASTA files must be split first — see docs/FASTA_FORMAT.md.)
+#   <input> can be either:
+#     - a DIRECTORY of single-record .fa/.fasta files (one protein per file), or
+#     - a single MULTI-FASTA file (>1 record); auto-split into <outdir>/_split/
+#
 # Env:    THREADS  (cpus per hhsearch invocation; default 2)
 #         TOP      (top-N hits to parse + plot per query; default 10)
 #         MARCHANTIA_HHDB  (DB prefix; default db/marchantia_v7.1)
 
 set -euo pipefail
 
-INDIR=${1:?usage: $0 <input_dir> <output_dir> [PARALLEL_JOBS]}
-OUTDIR=${2:?usage: $0 <input_dir> <output_dir> [PARALLEL_JOBS]}
+INPUT=${1:?usage: $0 <input_dir_OR_multifasta> <output_dir> [PARALLEL_JOBS]}
+OUTDIR=${2:?usage: $0 <input_dir_OR_multifasta> <output_dir> [PARALLEL_JOBS]}
 JOBS=${3:-$(( $(nproc 2>/dev/null || echo 8) / 2 ))}
 THREADS=${THREADS:-2}
 TOP=${TOP:-10}
@@ -39,9 +41,40 @@ for s in "$PARSE" "$PLOT" "$SUMMARIZE"; do
 done
 
 mkdir -p "$OUTDIR"
+
+# ---- Resolve INPUT to a directory of one-record FASTAs ----
+if [ -d "$INPUT" ]; then
+  INDIR="$INPUT"
+  echo "[$(date -Is)] input is a directory: $INDIR"
+elif [ -f "$INPUT" ]; then
+  # multi-FASTA: auto-split into <outdir>/_split/
+  INDIR="$OUTDIR/_split"
+  echo "[$(date -Is)] input is a multi-FASTA: $INPUT  ->  auto-splitting to $INDIR/"
+  mkdir -p "$INDIR"
+  rm -f "$INDIR"/*.fa 2>/dev/null || true
+  awk -v dir="$INDIR" '
+    /^>/ {
+      # take first whitespace token as the identifier
+      hdr = $0; sub(/^>/, "", hdr);
+      first = hdr; sub(/[ \t].*/, "", first);
+      # UniProt pipe format ">sp|ACC|NAME ..." -> take NAME (last pipe segment)
+      n = split(first, a, "|");
+      id = (n >= 3) ? a[n] : first;
+      # sanitize file name: keep only [A-Za-z0-9_.-]
+      gsub(/[^A-Za-z0-9_.-]/, "_", id);
+      fname = dir "/" id ".fa";
+    }
+    { print > fname }
+  ' "$INPUT"
+  echo "[$(date -Is)] split into $(ls "$INDIR"/*.fa | wc -l) files"
+else
+  echo "ERROR: input '$INPUT' is neither a directory nor a file" >&2
+  exit 1
+fi
+
 mapfile -t INPUTS < <(ls -1 "$INDIR"/*.fa "$INDIR"/*.fasta 2>/dev/null || true)
 N=${#INPUTS[@]}
-[ "$N" -gt 0 ] || { echo "no .fa/.fasta in $INDIR"; exit 1; }
+[ "$N" -gt 0 ] || { echo "no .fa/.fasta found"; exit 1; }
 
 echo "[$(date -Is)] $N queries -> $OUTDIR   (parallel=$JOBS, threads/job=$THREADS)"
 

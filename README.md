@@ -37,8 +37,12 @@ export MARCHANTIA_HHDB=/mnt/sds-hd/sd25l008/resources/marchantia_hhdb_v7.1/db_v1
 #   -> examples/AtATG5.hits.tsv   top-10 hits, tab-separated
 #   -> examples/AtATG5.pdf        figure (bar chart + coverage map)
 
-# Batch query (coming after the v1 single-query path is validated):
-./batch_query.sh examples/rqc_batch results/rqc_batch
+# Batch query (multi-FASTA OR directory of single-FASTAs):
+./batch_query.sh examples/rqc_batch results/rqc_batch       # input = directory
+./batch_query.sh my_queries.fa     results/my_queries        # input = multi-FASTA (auto-splits)
+#   -> results/<id>.{hhr,hits.tsv,pdf}   one set per protein
+#   -> results/SUMMARY.tsv               one row per query (top hit)
+#   -> results/SUMMARY.pdf               aggregate top-hit figure
 ```
 
 See [`examples/README.md`](examples/README.md) for the bundled

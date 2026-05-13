@@ -38,13 +38,26 @@ rqc_batch/
 └── EXPECTED_TOP_HITS.tsv          expected Marchantia orthologs + scores
 ```
 
-Run the batch:
+Run the batch (two equivalent ways):
 ```bash
-./batch_query.sh examples/rqc_batch examples/rqc_batch/results
-# writes results/*.hhr; expected top hits in EXPECTED_TOP_HITS.tsv
+# A. as a directory of single-FASTAs (one record per file)
+./batch_query.sh examples/rqc_batch results/rqc_batch
+
+# B. as a single multi-FASTA file (auto-split internally; UniProt headers detected)
+cat examples/rqc_batch/*.fa > /tmp/rqc_multi.fa
+./batch_query.sh /tmp/rqc_multi.fa results/rqc_batch
 ```
 
-Total wall: ~3 min on a 4-cpu node, against the v1.1 SDS DB.
+Each produces, in `results/rqc_batch/`:
+- `<query>.hhr` / `.hits.tsv` / `.pdf`  — one set per protein (same shape as single-query mode)
+- `SUMMARY.tsv` — one row per query with top hit + scores
+- `SUMMARY.pdf` — aggregate horizontal bar chart of best-hit probabilities
+
+Expected top hits are tracked in [`rqc_batch/EXPECTED_TOP_HITS.tsv`](rqc_batch/EXPECTED_TOP_HITS.tsv);
+a reference rendering of the SUMMARY.pdf is at
+[`rqc_batch/SUMMARY_example_output.pdf`](rqc_batch/SUMMARY_example_output.pdf).
+
+Total wall: ~2 min on a 4-cpu node (against the SDS DB).
 
 ## Add your own
 
