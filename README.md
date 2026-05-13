@@ -15,11 +15,12 @@ The DB is **already extracted and ready to query** on bwHPC SDS:
 
 ```
 /mnt/sds-hd/sd25l008/resources/marchantia_hhdb_v7.1/
-└── db_v1.1/                                        ← USE THIS  (≥99.4 % coverage)
-    └── marchantia_v7.1_{a3m,hhm,cs219}.{ffdata,ffindex}
+├── db_v1/         ← USE THIS for now (97.55 % proteome coverage, validated)
+│   └── marchantia_v7.1_{a3m,hhm,cs219}.{ffdata,ffindex}
+└── db_v1.1/       ← coming soon (≥99.4 % coverage; still building, currently empty)
 ```
 
-> `db_v1/` (97.55 % coverage, initial build) currently sits alongside `db_v1.1/` as a transitional safety copy. **Always query against `db_v1.1/`.** Once v1.1 is fully validated, `db_v1/` will be removed.
+> **Transitional note (May 2026)**: `db_v1.1/` is in the process of being built and copied — folder exists but is empty. Use `db_v1/` until the swap. Same query commands, just one path segment difference. When `db_v1.1/` is populated, this README will be updated and `db_v1/` will be removed after a grace period.
 
 To query from any bwHPC node that has SDS mounted:
 
@@ -29,7 +30,8 @@ mamba env create -f environment.yml      # installs hh-suite + python + pandas +
 conda activate marchantia_hhdb
 
 export HHLIB=$CONDA_PREFIX
-export MARCHANTIA_HHDB=/mnt/sds-hd/sd25l008/resources/marchantia_hhdb_v7.1/db_v1.1/marchantia_v7.1
+export MARCHANTIA_HHDB=/mnt/sds-hd/sd25l008/resources/marchantia_hhdb_v7.1/db_v1/marchantia_v7.1
+# (when v1.1 lands, swap db_v1 -> db_v1.1 in the path above)
 
 # Single query — one command, gets you raw .hhr + parsed .tsv + .pdf figure:
 ./query.sh examples/AtATG5.fa
