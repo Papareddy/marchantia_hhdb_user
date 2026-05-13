@@ -53,9 +53,10 @@ Each produces, in `results/rqc_batch/`:
 - `SUMMARY.tsv` — one row per query with top hit + scores
 - `SUMMARY.pdf` — aggregate horizontal bar chart of best-hit probabilities
 
-Expected top hits are tracked in [`rqc_batch/EXPECTED_TOP_HITS.tsv`](rqc_batch/EXPECTED_TOP_HITS.tsv);
-a reference rendering of the SUMMARY.pdf is at
-[`rqc_batch/SUMMARY_example_output.pdf`](rqc_batch/SUMMARY_example_output.pdf).
+Expected top hits are tracked in [`rqc_batch/EXPECTED_TOP_HITS.tsv`](rqc_batch/EXPECTED_TOP_HITS.tsv).
+Reference renderings bundled here:
+- [`rqc_batch/SUMMARY_example_output.pdf`](rqc_batch/SUMMARY_example_output.pdf) — aggregate top-hit figure across all 6 queries
+- [`rqc_batch/PELO_example_output.pdf`](rqc_batch/PELO_example_output.pdf) — per-query figure for PELO (stall recognition; expected Mp1g11870.1, Prob=100, E=4.8e-59), showing what each protein gets in batch mode
 
 Total wall: ~2 min on a 4-cpu node (against the SDS DB).
 
