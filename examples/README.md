@@ -54,9 +54,14 @@ Each produces, in the output dir:
 - `SUMMARY.pdf` — aggregate horizontal bar chart of best-hit probabilities
 
 Expected top hits are tracked in [`rqc_batch/EXPECTED_TOP_HITS.tsv`](rqc_batch/EXPECTED_TOP_HITS.tsv).
-Reference renderings bundled here:
+Reference renderings bundled here (one per query + the aggregate):
 - [`rqc_batch/SUMMARY_example_output.pdf`](rqc_batch/SUMMARY_example_output.pdf) — aggregate top-hit figure across all 6 queries
-- [`rqc_batch/PELO_example_output.pdf`](rqc_batch/PELO_example_output.pdf) — per-query figure for PELO (stall recognition; expected Mp1g11870.1, Prob=100, E=4.8e-59), showing what each protein gets in batch mode
+- [`rqc_batch/ABCE1_example_output.pdf`](rqc_batch/ABCE1_example_output.pdf) — ABCE1 / Rli1 (ribosome splitting) → Mp6g18410.1, Prob=100, E=1.1e-39
+- [`rqc_batch/HBS1L_example_output.pdf`](rqc_batch/HBS1L_example_output.pdf) — HBS1L / Hbs1 (PELO partner) → Mp6g18130.1, Prob=100, E=1.1e-73
+- [`rqc_batch/LTN1_example_output.pdf`](rqc_batch/LTN1_example_output.pdf) — Listerin / Ltn1 (E3 ligase) → Mp7g07340.1, Prob=100, E=4e-132
+- [`rqc_batch/NEMF_example_output.pdf`](rqc_batch/NEMF_example_output.pdf) — NEMF / Rqc2 (CAT-tail) → Mp1g00940.1, Prob=100, E=2e-157
+- [`rqc_batch/PELO_example_output.pdf`](rqc_batch/PELO_example_output.pdf) — Pelota / Dom34 (stall recognition) → Mp1g11870.1, Prob=100, E=4.8e-59
+- [`rqc_batch/ZNF598_example_output.pdf`](rqc_batch/ZNF598_example_output.pdf) — ZNF598 / Hel2 (collided-ribosome ubiquitin ligase) → Mp5g21820.1, Prob=100, E=1.1e-53
 
 Total wall: ~2 min on a 4-cpu node (against the SDS DB).
 
