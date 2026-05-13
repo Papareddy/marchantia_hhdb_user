@@ -17,9 +17,10 @@ DB=${MARCHANTIA_HHDB:-db/marchantia_v7.1}
 THREADS=${THREADS:-4}
 TOP=${TOP:-10}
 
-if [ -z "${HHLIB:-}" ] && [ -n "${CONDA_PREFIX:-}" ]; then
-  export HHLIB=$CONDA_PREFIX
-fi
+# Auto-activate conda env (one-time create on first run). Skip if already loaded.
+HERE=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
+# shellcheck disable=SC1091
+source "$HERE/scripts/setup_env.sh"
 
 [ -s "${DB}_a3m.ffdata" ] || {
   echo "ERROR: DB not found at '$DB' (looked for ${DB}_a3m.ffdata)" >&2
@@ -29,7 +30,6 @@ fi
 }
 
 # Bundled scripts live in scripts/ relative to this file
-HERE=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
 PARSE=$HERE/scripts/parse_hhr.py
 PLOT=$HERE/scripts/plot_hhr.py
 for s in "$PARSE" "$PLOT"; do
