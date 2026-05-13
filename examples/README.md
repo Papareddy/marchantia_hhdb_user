@@ -10,8 +10,16 @@ expected.
 
 ```bash
 ./query.sh examples/AtATG5.fa
+# Produces 3 files next to the input:
+#   examples/AtATG5.hhr           raw hhsearch output (full alignments)
+#   examples/AtATG5.hits.tsv      parsed top-10 hits  (machine-readable)
+#   examples/AtATG5.pdf           figure: bar chart + coverage map
+#
 # expected top hit: Mp1g12840.1   Prob=100.0   E-value=3.8e-80
 ```
+
+A reference rendering of the PDF for AtATG5 is bundled here:
+[`AtATG5_example_output.pdf`](AtATG5_example_output.pdf).
 
 ## Multi-query example: `rqc_batch/`
 

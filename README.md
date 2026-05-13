@@ -24,17 +24,21 @@ The DB is **already extracted and ready to query** on bwHPC SDS:
 To query from any bwHPC node that has SDS mounted:
 
 ```bash
-# Activate any conda env with hh-suite 3.3.0
-# (or: mamba create -n hhq -c bioconda hhsuite=3.3.0 && conda activate hhq)
+# Activate the bundled conda env (one-time):
+mamba env create -f environment.yml      # installs hh-suite + python + pandas + matplotlib
+conda activate marchantia_hhdb
+
 export HHLIB=$CONDA_PREFIX
-DB=/mnt/sds-hd/sd25l008/resources/marchantia_hhdb_v7.1/db_v1.1/marchantia_v7.1
+export MARCHANTIA_HHDB=/mnt/sds-hd/sd25l008/resources/marchantia_hhdb_v7.1/db_v1.1/marchantia_v7.1
 
-# Single query:
-hhsearch -i your_factor.fa -d "$DB" -o your_factor.hhr -cpu 4
+# Single query — one command, gets you raw .hhr + parsed .tsv + .pdf figure:
+./query.sh examples/AtATG5.fa
+#   -> examples/AtATG5.hhr        full hhsearch output
+#   -> examples/AtATG5.hits.tsv   top-10 hits, tab-separated
+#   -> examples/AtATG5.pdf        figure (bar chart + coverage map)
 
-# Or via the bundled wrappers:
-./query.sh examples/AtATG5.fa                              # single protein
-./batch_query.sh examples/rqc_batch results/rqc_batch      # whole folder
+# Batch query (coming after the v1 single-query path is validated):
+./batch_query.sh examples/rqc_batch results/rqc_batch
 ```
 
 See [`examples/README.md`](examples/README.md) for the bundled
@@ -96,12 +100,16 @@ marchantia_hhdb_user/
 ├── LICENSE                MIT
 ├── Makefile               fetch / verify / extract / clean (Zenodo, when published)
 ├── environment.yml        hh-suite 3.3.0 only (small env)
-├── query.sh               single-protein hhsearch wrapper
+├── query.sh               single-protein wrapper → .hhr + .hits.tsv + .pdf
 ├── batch_query.sh         loop over a dir of FASTAs (parallel via GNU parallel)
+├── scripts/
+│   ├── parse_hhr.py        .hhr → top-N hits TSV
+│   └── plot_hhr.py         hits TSV → ranking + coverage PDF/PNG figure
 ├── examples/
-│   ├── AtATG5.fa           single-query test (autophagy factor; expected Mp1g12840.1)
-│   ├── rqc_batch/          six conserved RQC factors (PELO/HBS1L/NEMF/LTN1/ABCE1/ZNF598)
-│   ├── rqc_batch/EXPECTED_TOP_HITS.tsv
+│   ├── AtATG5.fa                       single-query test (expected Mp1g12840.1)
+│   ├── AtATG5_example_output.pdf       reference rendering of the query.sh PDF
+│   ├── rqc_batch/                      6 conserved RQC factors (PELO/HBS1L/NEMF/LTN1/ABCE1/ZNF598)
+│   ├── rqc_batch/EXPECTED_TOP_HITS.tsv expected Marchantia orthologs
 │   └── README.md
 └── docs/
     ├── FASTA_FORMAT.md    input requirements, gotchas, multi-FASTA splitting

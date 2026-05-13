@@ -3,6 +3,8 @@ channels:
   - conda-forge
   - bioconda
 dependencies:
-  - python=3.9
+  - python=3.11
   - hhsuite=3.3.0
-  - parallel  # for batch_query.sh
+  - parallel             # for batch_query.sh
+  - pandas               # parse .hhr into tabular form
+  - matplotlib-base      # plot top hits + coverage map
