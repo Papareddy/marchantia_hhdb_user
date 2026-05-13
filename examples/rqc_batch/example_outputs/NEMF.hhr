@@ -1,0 +1,266 @@
+Query         sp|O60524|NEMF_HUMAN Ribosome quality control complex subunit NEMF OS=Homo sapiens OX=9606 GN=NEMF PE=1 SV=4
+Match_columns 1076
+No_of_seqs    1 out of 1
+Neff          1
+Searched_HMMs 17567
+Date          Wed May 13 10:14:46 2026
+Command       hhsearch -i examples/rqc_batch/NEMF.fa -d /mnt/sds-hd/sd25l008/resources/marchantia_hhdb_v7.1/db_v1/marchantia_v7.1 -o user_demo/batch_out/NEMF.hhr -cpu 2 -v 0 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 Mp1g00940.1                    100.0  2E-157  9E-162 1305.5   0.0 1020    1-1075    2-1198(1212)
+  2 Mp2g14070.1                     97.5 1.1E-07 6.3E-12   84.1   0.0  101  534-636     9-115 (215)
+  3 Mp1g14550.1                     15.4      30  0.0017   34.2   0.0   13  610-622   212-224 (386)
+  4 Mp6g08090.1                     10.2      54  0.0031   30.3   0.0   26  273-298   118-143 (177)
+  5 Mp7g09070.1                     10.2      55  0.0031   33.0   0.0   15  267-281   137-151 (1042)
+  6 Mp3g03070.1                      9.6      59  0.0034   31.0   0.0   10   97-106   139-148 (512)
+  7 Mp1g01010.1                      7.5      83  0.0047   31.5   0.0   17   78-94     35-51  (370)
+  8 Mp4g14550.1                      6.8      94  0.0054   29.2   0.0   31  538-569   128-162 (395)
+  9 Mp2g02940.1                      6.2   1E+02  0.0059   27.1   0.0   50  531-585   238-287 (291)
+ 10 Mp8g15310.1                      6.0 1.1E+02  0.0063   26.0   0.0   26  355-380    61-86  (110)
+
+No 1
+>Mp1g00940.1
+Probab=100.00  E-value=1.6e-157  Score=1305.53  Aligned_cols=1020  Identities=39%  Similarity=0.637  Sum_probs=731.7  Template_Neff=7.600
+
+Q sp|O60524|NEMF    1 MKSRFSTIDLRAVLAELNASLLGMRVNNVYDVDNKTYLIRLQKPD--------FKATLLLESGIRIHTTEFEWPKNMMPS   72 (1076)
+Q Consensus         1 mksrfstidlravlaelnasllgmrvnnvydvdnktylirlqkpd--------fkatlllesgirihttefewpknmmps   72 (1076)
+                      ||++||++||++++.||+.+ +|+||.|||+++.++|+|+|++++        .+.+|+|++|+|||+|.|.++++..||
+T Consensus         2 mK~~mssldl~alv~EL~~l-~G~RI~nIy~~~~~t~lLkl~~~~~~~~~~~~~k~~Llie~g~rihlT~~~~~k~~~Ps   80 (1212)
+T Mp1g00940.1       2 VKVRMTTADVAAEVRCLRRL-IGMRCANIYDLSPKTYVIKFAKSSGVAESGESERALVLLESGVRLHTTEFSRDKSSTPS   80 (1212)
+Confidence            89999999999999999886 999999999999999999999876        678999999999999999999999999
+
+
+Q sp|O60524|NEMF   73 SFAMKCRKHLKSRRLVSAKQLGVDRIVDFQFGSDEAAYHLIIELYDRGNIVLTDYEYVILNILRFRTDEADDVKFAVRER  152 (1076)
+Q Consensus        73 sfamkcrkhlksrrlvsakqlgvdrivdfqfgsdeaayhliielydrgnivltdyeyvilnilrfrtdeaddvkfavrer  152 (1076)
+                      +|||+|||||+|+||++|+|+++||||+|+|+.++..|+||||||++|||||||.+|+||++||++.+.++.+.+.+|+.
+T Consensus        81 ~F~~kLRKhLrg~RL~~I~Q~g~DRIV~~~F~~~~~~~~LIvEL~g~GNIILtD~~~~Il~~LR~~~~~~r~~~i~~g~~  160 (1212)
+T Mp1g00940.1      81 GFTLKLRKHLRTRRLEDVRQLGIDRVVDFQFGLGEGAFHIILELYSQGNLLLTDSHHNVITLLRTHRDDEKGLLMMAHHQ  160 (1212)
+Confidence            99999999999999999999999999999999887889999999999999999999999999999988777677999999
+
+
+Q sp|O60524|NEMF  153 YPLDHARAAEPLLTLERLTEIVASA------------------------------------------------------P  178 (1076)
+Q Consensus       153 ypldharaaeplltlerlteivasa------------------------------------------------------p  178 (1076)
+                      ||+|+.+.+. .++.+.|..++...                                                      .
+T Consensus       161 Yp~~~~~~~~-~~s~e~l~~~l~~~~~~~~~~~~~~~~~~~~~~~~g~~~~~~~~~k~~~~~k~~~~~~~~k~~~~~~~~  239 (1212)
+T Mp1g00940.1     161 YPINSCRLFE-RTKKEAISTLLKEQTRLKADEAVEEQQAASKEVHTGSVNEDAKKTKWKPEGKGSKSASQEVSGNGKKGA  239 (1212)
+Confidence            9988766443 44555555443210                                                      0
+
+
+Q sp|O60524|NEMF  179 KGELLKRVLNPLLPYGPALIEHCLLENGFSGNVKVDE-KLETKDIEKVLVSLQKAEDYMKTTS-N-FSGKGYIIQKREI-  254 (1076)
+Q Consensus       179 kgellkrvlnpllpygpaliehcllengfsgnvkvde-kletkdiekvlvslqkaedymktts-n-fsgkgyiiqkrei-  254 (1076)
+                      ....++++|...+||||.|++|||.++|++++.++.. .++++.++.|+.+|..+..++..+. . +.+.|||++.... 
+T Consensus       240 ~~~~l~~lL~~~~glgp~laeeil~ragl~~~~~~~~~~l~~~~~~~L~~~l~~~~~~l~~~~~~~~~~~gyI~~~~~~~  319 (1212)
+T Mp1g00940.1     240 GLPTLKFLLVEGLGYGPSLSEHIILSAGLQPGLKMNSSILSRDEFEALAAAIKRFEDWLEAVVSGDIVPEGYIYMQKVGM  319 (1212)
+Confidence            1346788999999999999999999999999877643 3567788999999988887777665 2 2367899875321 
+
+
+Q sp|O60524|NEMF  255 -KPSLEADK-PVEDILTYEEFHPFLFSQHSQCPYIEFESFDKAVDEFYSKIEGQKIDLKALQQEKQALKKLDNVRKDHEN  332 (1076)
+Q Consensus       255 -kpsleadk-pvediltyeefhpflfsqhsqcpyiefesfdkavdefyskiegqkidlkalqqekqalkkldnvrkdhen  332 (1076)
+                       ....++.+ .......|.+|+||+|.++....+..|+||++|||+||+.++.++...+..+.+..+.++|++++++|++
+T Consensus       320 ~~~~~~~~~~~~~~~~~~~~f~P~~l~~~~~~~~~~f~SfneAvDeyfs~~e~qk~~~~~~~~~~~~~kKLeki~~~qe~  399 (1212)
+T Mp1g00940.1     320 GKAKSAASDVKEEFDRVYDEFSPLDLKQMKDRESMKLATFDAAMDEYYSKVEGQRADQQRRTQEESALTKLDKIRADQTN  399 (1212)
+Confidence             00000000 0111234789999999998877789999999999999999888877666667778889999999999999
+
+
+Q sp|O60524|NEMF  333 RLEALQQAQEIDKLKGELIEMNLQIVDRAIQVVRSALANQIDWTEIGLIVKEAQAQGDPVASAIKELKLQTNHVTMLLRN  412 (1076)
+Q Consensus       333 rlealqqaqeidklkgeliemnlqivdraiqvvrsalanqidwteiglivkeaqaqgdpvasaikelklqtnhvtmllrn  412 (1076)
+                      +++.|+++++.++++|+||++|++.|+.+|.+|+.++++||+|.+|.++|+.++..|+|++.+|+.|+++.+.++|.|++
+T Consensus       400 rl~~L~~~~e~~~~~aelI~~n~~~Vd~~i~~i~~~~~~g~~W~~i~~~i~~~k~~g~p~a~~I~~l~l~~~~i~l~L~d  479 (1212)
+T Mp1g00940.1     400 RVKALKREVDQSVHMAELIEYNLDDVDAAILAVRTALASGMDWKDLGRMIKEEKKAGNPVAGVIHSLQLETNQITLLLSN  479 (1212)
+Confidence            99999999999999999999999999999999999999999999999999999999999999999999999999999987
+
+
+Q sp|O60524|NEMF  413 PYLLSEEEDDDVDGDVNVEKNETEPPKGKKKKQKNKQLQKPQKNKPLLVDVDLSLSAYANAKKYYDHKRYAAKKTQKTVE  492 (1076)
+Q Consensus       413 pyllseeedddvdgdvnvekneteppkgkkkkqknkqlqkpqknkpllvdvdlslsayanakkyydhkryaakktqktve  492 (1076)
+                      +++  +. ++  +++                           +...+.|+||+++||++||+.||+++|++++|++++.+
+T Consensus       480 ~~~--~~-~~--~~~---------------------------~~~~~~I~LD~~~Sa~~NA~~yy~k~Kk~~~K~~kt~~  527 (1212)
+T Mp1g00940.1     480 NLD--DM-DE--EEK---------------------------TRPVDKVEVDLSLSAHANARRWFEMKKKHATKQEKTLA  527 (1212)
+Confidence            763  11 11  111                           23457999999999999999999999999999999999
+
+
+Q sp|O60524|NEMF  493 AAEKAFKSAEKKTKQTLKEVQTVTSIQKARKVYWFEKFLWFISSENYLIIGGRDQQQNEIIVKRYLTPGDIYVHADLHGA  572 (1076)
+Q Consensus       493 aaekafksaekktkqtlkevqtvtsiqkarkvywfekflwfissenyliiggrdqqqneiivkryltpgdiyvhadlhga  572 (1076)
+                      +++.+++.+++++.+.+...+....+++.|+++||++|+|||||+|||||+||||+|||+||+|||+++|+|||||+|||
+T Consensus       528 ~~e~alk~~ekk~~~~l~~~~~~~~~~~~Rk~~WfEkf~wFiSSdG~lVl~GRDA~qNE~Lvkry~~~~Diw~HAd~~Ga  607 (1212)
+T Mp1g00940.1     528 AHEKAFKAAEKKTQQQLAQAKTVAAITHIRKMHWFEKFNWFISSENYLVISGRDAQQNELVVKRYMKKGDLYVHADLHGA  607 (1212)
+Confidence            99999999998877666554433445677889999999999999999999999999999999999999999999999999
+
+
+Q sp|O60524|NEMF  573 TSCVIKNPT-GEPIPPRTLTEAGTMALCYSAAWDARVITSAWWVYHHQVSKTAPTGEYLTTGSFMIRGKKNFLPPSYLMM  651 (1076)
+Q Consensus       573 tscviknpt-gepipprtlteagtmalcysaawdarvitsawwvyhhqvsktaptgeylttgsfmirgkknflppsylmm  651 (1076)
+                      ||||||++. +.++|+.||.+||+||||||+||+++.|+++|||+++||||++|||+||++||||||||||||||++|+|
+T Consensus       608 shVIIK~~~~~~~ip~~tL~eAA~~Aa~~SkAW~sk~v~~ayWV~~~QVsKtapsGeyL~~GsFmIrGkKNyl~~~~L~~  687 (1212)
+T Mp1g00940.1     608 SSTVIKNNDPTRPIPPFTINQAGSFTVCRSQAWDSKIVTSAWWVHPHQVSKTAPTGEYLTVGSFMVRGKKNFLAPNPLVM  687 (1212)
+Confidence            999999986 5678999999999999999999999999999999999999999999999999999999999999999999
+
+
+Q sp|O60524|NEMF  652 GFSFLFKVDESCVWRHQGERKVRVQDEDMETLASCTSELISEEMEQLDGGDT---SSDED--KEEHETP---VEVELMTQ  723 (1076)
+Q Consensus       652 gfsflfkvdescvwrhqgerkvrvqdedmetlasctseliseemeqldggdt---ssded--keehetp---vevelmtq  723 (1076)
+                      ||||+|+|+++|+.+|.++|+.++..++.++...   .. .+..+.+.+.+.   ++++.  .+.++.+   ++.++.++
+T Consensus       688 g~g~lf~~~~~~~~~h~~~r~~~~~~~~~~~~~~---~~-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  763 (1212)
+T Mp1g00940.1     688 GYGLLFRLDESCIAAHLNERRIRGDGEGEESERA---AF-VEAGHPEVGKSSNRNNDDDEENIEVPSEDQDQEVRADTSD  763 (1212)
+Confidence            9999999999999999999998865322111110   00 011110100000   00000  0000000   00000000
+
+
+Q sp|O60524|NEMF  724 VDQEDITLQSGRDELNEELIQEESSEDEGEYEEVRKDQDSVGE-MKDE---GEETLNYPDTTIDLSH---LQPQR-SIQK  795 (1076)
+Q Consensus       724 vdqeditlqsgrdelneeliqeessedegeyeevrkdqdsvge-mkde---geetlnypdttidlsh---lqpqr-siqk  795 (1076)
+                      ++.      ++.++ +++. +.+..+++++ +.    ++.+++ +.++   ....+++++...++..   +.+.. ....
+T Consensus       764 ~~~------~~~~~-~~~~-~~~~~~~~~~-~~----~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  830 (1212)
+T Mp1g00940.1     764 NDD------EGFQE-KSRS-GSDRSDGMGS-EL----MTAVHGTNISEGGDDSGFDALLDKAFELRSAHKVTSNKYGLEL  830 (1212)
+Confidence            000      00000 0000 0000000000 00    000000 0000   0001111121111100   00000 0000
+
+
+Q sp|O60524|NEMF  796 LA----S---KE---ESSNSSDSKSQSRRHLSAKERREMKKKKLPSDSG----DLEAL-----EGKDKEKESTV------  850 (1076)
+Q Consensus       796 la----s---ke---essnssdsksqsrrhlsakerremkkkklpsdsg----dleal-----egkdkekestv------  850 (1076)
+                      ..    +   .+   ..........++++++|+++||.++|+..+...+    ..+..     .+..+  ....      
+T Consensus       831 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~k~~~~~~~~~~~~~~~~~~~~~~~~~~~--~~~~~~~~~~  908 (1212)
+T Mp1g00940.1     831 VNVATDADRNVDSAPGNVKMSKAVQREKPYVSRAERRKLKKGSKHGKDDERNGVAGDEELATVEGQER--LDNLDISDEL  908 (1212)
+Confidence            00    0   00   0001101233446789999999888754332110    00000     00000  0000      
+
+
+Q sp|O60524|NEMF  851 HIE-THQNTSKNVAAVQPMKRGQKSKMKKMKEKYKDQDEEDRELIMKLLGSAGSNKEEKGKKGKKGK--TKDE-PVKKQP  926 (1076)
+Q Consensus       851 hie-thqntsknvaavqpmkrgqkskmkkmkekykdqdeedrelimkllgsagsnkeekgkkgkkgk--tkde-pvkkqp  926 (1076)
+                      ... +.+.++.+++++++++||||||||||++||||||||||+|||+||||+++++..++..+++..  .+.. .. .++
+T Consensus       909 ~~~~~~~~~~~~~~~~~~~~RGkk~K~kk~k~KYadQDeEeR~l~m~lLgs~~~~~~~~~~~~~~~~~~~k~~~~~-~~~  987 (1212)
+T Mp1g00940.1     909 SALGTVEGGPDSSPGGSKPSRGRKGKLKKIKEKYAEQDEEERQLRMSLLASAGRKESKQPKALGVNGKASTSSKTT-FNE  987 (1212)
+Confidence            000 101011112233446899999999999999999999999999999998754322211111000  0000 00 000
+
+
+Q sp|O60524|NEMF  927 QK-P---R-------GGQRVSDNIKKET---------PFLE--VIT---HELQDFAVDD----P----------------  961 (1076)
+Q Consensus       927 qk-p---r-------ggqrvsdnikket---------pfle--vit---helqdfavdd----p----------------  961 (1076)
+                      .+ .   +       .++ +.++|+...         |+++  .+.   .|+++++..+    +                
+T Consensus       988 ~~~~~~~~~~~~~~~~~~-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 1066 (1212)
+T Mp1g00940.1     988 QDAGLKEKVCYKCKKTGH-IVRDCPYETASLSAKDERPTYVGDSQNLATERIQKASTDDDAREGIMQPIVRNEAEKPKDG 1066 (1212)
+Confidence            00 0   0       000 111111000         0000  000   0111111111    0                
+
+
+Q sp|O60524|NEMF  962 -H-----D-DKEE--QDLDQQG-------N--EENLFDSLTGQPHPEDVLLFAIPICAPYTTMTNYKYKVKLTPGVQKKG 1023 (1076)
+Q Consensus       962 -h-----d-dkee--qdldqqg-------n--eenlfdsltgqphpedvllfaipicapyttmtnykykvkltpgvqkkg 1023 (1076)
+                       .     . +.++  ..+++++       +  .+..|++|||+|.++|+|+|||||||||++|++|||||||+||++|||
+T Consensus      1067 ~~~~~~~~~~~~e~~~~~~ee~~~~~~~~~~~~~~~l~~lt~~p~~~d~~~~aipvcaPy~~l~~ykykvKl~PG~~KkG 1146 (1212)
+T Mp1g00940.1    1067 LSRRAYSKAAKEEIAAIMAEENVVELGDDDKEKLIELDSLTGIPHSSDVLLYSVPMCGPYSALQAFKYRVKLTPGPAKKG 1146 (1212)
+Confidence             0     0 0011  1112111       1  567899999999999999999999999999999999999999999999
+
+
+Q sp|O60524|NEMF 1024 KAAKTALNSFMHSKEATAREKDLFRSVKDTDLSRNIPGKVKVSAPNLLNVKR 1075 (1076)
+Q Consensus      1024 kaaktalnsfmhskeatarekdlfrsvkdtdlsrnipgkvkvsapnllnvkr 1075 (1076)
+                      ||||.|+++|++++.+|+||++|||+|+|+|++++|+|+|||++||+.+.+.
+T Consensus      1147 Ka~k~~~~~f~~~~~~~~~e~~lik~~~~~e~~~~~~~~vk~~~~g~~~~~~ 1198 (1212)
+T Mp1g00940.1    1147 KAAKVAIDVFSHMPETTVREKELMKAVTDPELVACMLGNAKVTAPGLTKLKK 1198 (1212)
+Confidence            9999999999999999999999999999999999999999999998887543
+
+
+No 2
+>Mp2g14070.1
+Probab=97.51  E-value=1.1e-07  Score=84.12  Aligned_cols=101  Identities=18%  Similarity=0.294  Sum_probs=82.4  Template_Neff=8.800
+
+Q sp|O60524|NEMF  534 ISSENYLIIGGRDQQQNEIIVKRYLTPGDIYVHADLHGATSCVIKNPTGE---PIPPRTLTEAGTMALCYSAAWDA-RVI  609 (1076)
+Q Consensus       534 issenyliiggrdqqqneiivkryltpgdiyvhadlhgatscviknptge---pipprtlteagtmalcysaawda-rvi  609 (1076)
+                      ++++|+.|++|||+.+|+.|+ +|+.++|+|||++.++||||+|+.+.+.   .+|+..|..||.++++||.++.. ..+
+T Consensus         9 ~~~~~~~iivGrn~~eN~~L~-~~~~~~d~wfh~~~~~g~~v~l~~~~g~~~~~~~~~~l~~aa~l~~~~S~~~~~~~~v   87 (215)
+T Mp2g14070.1       9 PEAGDYVIYMGLDKHENEDLI-KYGLPEDIWFHVDKLSSAHVYLRMQKGQTMEGISAELLEDCAQLVKANSIQGNKINNL   87 (215)
+Confidence            348899999999999999998 9999999999999999999999865321   47899999999999999997654 445
+
+
+Q sp|O60524|NEMF  610 TSAWWVYHHQVSKTA--PTGEYLTTGSFM  636 (1076)
+Q Consensus       610 tsawwvyhhqvskta--ptgeylttgsfm  636 (1076)
+                      .+. |+.+.+|+|+.  ++|.+...+.-+
+T Consensus        88 ~v~-~t~~~nl~k~~~~~~G~V~~~~~~~  115 (215)
+T Mp2g14070.1      88 DVV-YTPWYNLRKVPSMDVGQVGFHNPKL  115 (215)
+Confidence            555 58999999876  456655555433
+
+
+No 3
+>Mp1g14550.1
+Probab=15.39  E-value=30  Score=34.19  Aligned_cols=13  Identities=46%  Similarity=1.257  Sum_probs=10.2  Template_Neff=5.700
+
+Q sp|O60524|NEMF  610 TSAWWVYHHQVSK  622 (1076)
+Q Consensus       610 tsawwvyhhqvsk  622 (1076)
+                      .-.||+.+|.+|-
+T Consensus       212 Ik~WWi~HHY~s~  224 (386)
+T Mp1g14550.1     212 IRPWWVYHHYCAM  224 (386)
+Confidence            4578999998864
+
+
+No 4
+>Mp6g08090.1
+Probab=10.18  E-value=54  Score=30.32  Aligned_cols=26  Identities=27%  Similarity=0.418  Sum_probs=17.5  Template_Neff=3.200
+
+Q sp|O60524|NEMF  273 FHPFLFSQHSQCPYIEFESFDKAVDE  298 (1076)
+Q Consensus       273 fhpflfsqhsqcpyiefesfdkavde  298 (1076)
+                      +.-|+..|-....+++.+||...+..
+T Consensus       118 L~~FL~EQPsQLKYIEWPsFqSTlkT  143 (177)
+T Mp6g08090.1     118 AGRFLLEQPGQLQFIEWPTVNTVVRM  143 (177)
+Confidence            34455666666678888888877543
+
+
+No 5
+>Mp7g09070.1
+Probab=10.15  E-value=55  Score=32.96  Aligned_cols=15  Identities=13%  Similarity=0.782  Sum_probs=8.4  Template_Neff=9.900
+
+Q sp|O60524|NEMF  267 ILTYEEFHPFLFSQH  281 (1076)
+Q Consensus       267 iltyeefhpflfsqh  281 (1076)
+                      ...|.+|.-|...+.
+T Consensus       137 ~i~~~ef~~~~~~~~  151 (1042)
+T Mp7g09070.1     137 VIGFDDFTSYILVQQ  151 (1042)
+Confidence            344666766665543
+
+
+No 6
+>Mp3g03070.1
+Probab=9.59  E-value=59  Score=31.01  Aligned_cols=10  Identities=20%  Similarity=0.235  Sum_probs=5.3  Template_Neff=8.600
+
+Q sp|O60524|NEMF   97 RIVDFQFGSD  106 (1076)
+Q Consensus        97 rivdfqfgsd  106 (1076)
+                      .+|.|.|...
+T Consensus       139 y~vll~f~~~  148 (512)
+T Mp3g03070.1     139 YSVLMKFDKQ  148 (512)
+Confidence            4555666543
+
+
+No 7
+>Mp1g01010.1
+Probab=7.47  E-value=83  Score=31.54  Aligned_cols=17  Identities=6%  Similarity=0.038  Sum_probs=9.6  Template_Neff=3.900
+
+Q sp|O60524|NEMF   78 CRKHLKSRRLVSAKQLG   94 (1076)
+Q Consensus        78 crkhlksrrlvsakqlg   94 (1076)
+                      +|.|+.|.-+..|+..+
+T Consensus        35 ~~~~~~g~~~~~~~~~~   51 (370)
+T Mp1g01010.1      35 LRREIIGLVKFGIRKKT   51 (370)
+Confidence            56666665555554444
+
+
+No 8
+>Mp4g14550.1
+Probab=6.76  E-value=94  Score=29.19  Aligned_cols=31  Identities=19%  Similarity=0.393  Sum_probs=25.4  Template_Neff=7.800
+
+Q sp|O60524|NEMF  538 NYLIIGGRDQQQNEIIVKRYLTPGD----IYVHADL  569 (1076)
+Q Consensus       538 nyliiggrdqqqneiivkryltpgd----iyvhadl  569 (1076)
+                      .|++++ ++..+-..|..++...++    +|||+|.
+T Consensus       128 AFlfL~-~~~l~l~~Lw~~~~~~~~~~ysiyVH~d~  162 (395)
+T Mp4g14550.1     128 AFMFLT-KGPLPLYKLWERYFKGHRDLFSVYVHATP  162 (395)
+Confidence            467777 888888999999988765    9999974
+
+
+No 9
+>Mp2g02940.1
+Probab=6.24  E-value=1e+02  Score=27.12  Aligned_cols=50  Identities=20%  Similarity=0.195  Sum_probs=0.0  Template_Neff=8.500
+
+Q sp|O60524|NEMF  531 LWFISSENYLIIGGRDQQQNEIIVKRYLTPGDIYVHADLHGATSCVIKNPTGEPI  585 (1076)
+Q Consensus       531 lwfissenyliiggrdqqqneiivkryltpgdiyvhadlhgatscviknptgepi  585 (1076)
+                      +|.+|.-++||+  ....-...-.-+...+..+|.+.+  +. .|-+..+|+|+.
+T Consensus       238 ~~lLs~cd~lI~--s~S~Fg~~Aa~~~~~~~~~~~~~~--~~-~C~~~~~~~~~~  287 (291)
+T Mp2g02940.1     238 WILLTKMDYLYI--SRSGFSETAAFAGMVPTERLAVRD--EY-RCGFYPWTGEAG  287 (291)
+
+
+No 10
+>Mp8g15310.1
+Probab=5.96  E-value=1.1e+02  Score=25.96  Aligned_cols=26  Identities=42%  Similarity=0.589  Sum_probs=0.0  Template_Neff=1.000
+
+Q sp|O60524|NEMF  355 LQIVDRAIQVVRSALANQIDWTEIGL  380 (1076)
+Q Consensus       355 lqivdraiqvvrsalanqidwteigl  380 (1076)
+                      +..|||.||-|||...........|+
+T Consensus        61 ltyvdrsiqsvrsifvgswtlssfgl   86 (110)
+T Mp8g15310.1      61 LTYVDRSIQSVRSIFVGSWTLSSFGL   86 (110)
+
+

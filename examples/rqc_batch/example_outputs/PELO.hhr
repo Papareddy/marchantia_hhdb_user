@@ -1,0 +1,232 @@
+Query         sp|Q9BRX2|PELO_HUMAN Protein pelota homolog OS=Homo sapiens OX=9606 GN=PELO PE=1 SV=2
+Match_columns 385
+No_of_seqs    1 out of 1
+Neff          1
+Searched_HMMs 17567
+Date          Wed May 13 10:15:07 2026
+Command       hhsearch -i examples/rqc_batch/PELO.fa -d /mnt/sds-hd/sd25l008/resources/marchantia_hhdb_v7.1/db_v1/marchantia_v7.1 -o user_demo/batch_out/PELO.hhr -cpu 2 -v 0 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 Mp1g11870.1                    100.0 4.8E-59 2.7E-63  391.6   0.0  377    1-377     1-377 (378)
+  2 Mp3g07100.1                     99.0 4.3E-14 2.4E-18  119.5   0.0  289   77-383    89-431 (437)
+  3 Mp4g06640.1                     98.9 1.8E-13   1E-17  116.0   0.0  290   76-383    88-431 (437)
+  4 Mp3g03710.1                     11.9      44  0.0025   32.5   0.0   15  181-195   571-585 (673)
+  5 Mp2g19420.1                      9.0      64  0.0037   23.5   0.0    9  184-192    29-37  (137)
+  6 Mp2g11340.1                      8.3      72  0.0041   25.9   0.0    6  203-208    77-82  (329)
+  7 Mp5g07510.1                      8.3      72  0.0041   25.6   0.0   34  147-182     4-37  (146)
+  8 Mp1g22930.1                      8.0      76  0.0043   24.0   0.0   37  311-347   276-312 (358)
+  9 Mp3g01240.1                      6.8      94  0.0053   21.5   0.0   18  352-369     7-25  (52)
+ 10 Mp5g03830.1                      6.6      97  0.0055   24.0   0.0   23  158-180    47-69  (116)
+
+No 1
+>Mp1g11870.1
+Probab=100.00  E-value=4.8e-59  Score=391.62  Aligned_cols=377  Identities=53%  Similarity=0.906  Sum_probs=339.6  Template_Neff=9.600
+
+Q sp|Q9BRX2|PELO    1 MKLVRKNIEKDNAGQVTLVPEEPEDMWHTYNLVQVGDSLRASTIRKVQTESSTGSVGSNRVRTTLTLCVEAIDFDSQACQ   80 (385)
+Q Consensus         1 mklvrkniekdnagqvtlvpeepedmwhtynlvqvgdslrastirkvqtesstgsvgsnrvrttltlcveaidfdsqacq   80 (385)
+                      |||++.+.+++++|.++|+|||+||||+||+||.+||+|+++|+|+++.+.+.++.+++|++++|+|+||+++|++..+.
+T Consensus         1 Mki~~~~~~~~~~~~~~l~~e~~dDl~~L~~li~~gD~v~~~t~R~i~~~~~~~~~~~~r~~~~l~i~ve~~~~~~~~~~   80 (378)
+T Mp1g11870.1       1 MKLVRKDFVKDAAGFVKLVPEEPEDLWHVYNLIAPNDHISAVTVRKVNRETSSGGNEAERVRLKLEVKVETVEYDNVAAV   80 (378)
+Confidence            99999999888889999999999999999999999999999999999986544556778999999999999999999999
+
+
+Q sp|Q9BRX2|PELO   81 LRVKGTNIQENEYVKMGAYHTIELEPNRQFTLAKKQWDSVVLERIEQACDPAWSADVAAVVMQEGLAHICLVTPSMTLTR  160 (385)
+Q Consensus        81 lrvkgtniqeneyvkmgayhtielepnrqftlakkqwdsvvlerieqacdpawsadvaavvmqeglahiclvtpsmtltr  160 (385)
+                      |+|+|+|++++++++.|+|||++|+++.++++.|..|+.|++++|.++.+...++.++++++|++.|.++.+..+.+...
+T Consensus        81 lri~G~i~~~~e~~~~g~~ht~~i~~~~~~~i~k~~w~~~~l~~L~~~~~~~~~~~~~vv~ld~~~a~i~~~~~~~~~~~  160 (378)
+T Mp1g11870.1      81 LRVRGKNMAENEHVRLGAYHTLEIDQQRPFVLTKSNWDSIAIDLLKEACDPAASADVAAVILQEGLANICLLGQSVTTTK  160 (378)
+Confidence            99999999998888899999999999999999998899999999999987655556999999999999999999999888
+
+
+Q sp|Q9BRX2|PELO  161 AKVEVNIPRKRKGNCSQHDRALERFYEQVVQAIQRHIHFDVVKCILVASPGFVREQFCDYLFQQAVKTDNKLLLENRSKF  240 (385)
+Q Consensus       161 akvevniprkrkgncsqhdralerfyeqvvqaiqrhihfdvvkcilvaspgfvreqfcdylfqqavktdnklllenrskf  240 (385)
+                      .++..++|+++.++++.+++..++||+++++.+.+++....+.+||||||++.++.|.++|++...+.+++.+..+..++
+T Consensus       161 ~~~~~~~~~k~~g~~~~~e~~~~~f~~~v~~~l~~~~~~~~~~~lIiaG~~~~~~~f~~~L~~~~~~~~~~~~~~~~~~i  240 (378)
+T Mp1g11870.1     161 ARLETSIPRKRGAAIAGYDKALNKFFENVLQGVLRHVDFSIVKCLIIASPGFTKDQFYNYMMLEASRRELRNIIENKSKI  240 (378)
+Confidence            88888888776544445566789999999999999987777789999999999999999998875543444444444566
+
+
+Q sp|Q9BRX2|PELO  241 LQVHASSGHKYSLKEALCDPTVASRLSDTKAAGEVKALDDFYKMLQHEPDRAFYGLKQVEKANEAMAIDTLLISDELFRH  320 (385)
+Q Consensus       241 lqvhassghkyslkealcdptvasrlsdtkaagevkalddfykmlqhepdrafyglkqvekaneamaidtllisdelfrh  320 (385)
+                      +...+++++.++++|+++++.+.+++++.+..++.+++++|++++++++++++||+++|++|+++|||++|||+++++++
+T Consensus       241 ~~~~~~~~~~~~~~eil~~~~v~~~l~~~~~~~e~~~ve~~~~~~~~~~~~~~~G~~~v~~A~~~GaV~~Llv~~~~~~~  320 (378)
+T Mp1g11870.1     241 VLAHSSSGYKHSLKEVLAEPAVMAQIKDTRAAKEVKVMQDFFSMLSQDSARAFYGPKHVEAAQERIAIQTLLITDELFRC  320 (378)
+Confidence            66677877889999999998899999999999999999999999999867999999999999999999999999999988
+
+
+Q sp|Q9BRX2|PELO  321 QDVATRSRYVRLVDSVKENAGTVRIFSSLHVSGEQLSQLTGVAAILRFPVPELSDQE  377 (385)
+Q Consensus       321 qdvatrsryvrlvdsvkenagtvrifsslhvsgeqlsqltgvaailrfpvpelsdqe  377 (385)
+                      ..+..++.+++|++.|.++||+|++|+++|++|++|.++|||||+|||+++..+++|
+T Consensus       321 ~~~~~~~~~~~l~~~a~~~g~~V~iv~~~~~~g~~L~~~gGiaAiLRy~~~~~~~~~  377 (378)
+T Mp1g11870.1     321 ADIPTRRRYVDLVESVKEMGGDVHVFSSMHPSGEQLGQLTGIAAILRFPLPDLEDME  377 (378)
+Confidence            777788899999999999999999999999999999999999999999998887765
+
+
+No 2
+>Mp3g07100.1
+Probab=99.04  E-value=4.3e-14  Score=119.51  Aligned_cols=289  Identities=17%  Similarity=0.207  Sum_probs=244.9  Template_Neff=9.700
+
+Q sp|Q9BRX2|PELO   77 QACQLRVKGTNIQENEYVKMGAYHTIELEPNRQFTLAKK-QWDSVVLERIEQACDPAWSADVAAVVMQEGLAHICLVTPS  155 (385)
+Q Consensus        77 qacqlrvkgtniqeneyvkmgayhtielepnrqftlakk-qwdsvvlerieqacdpawsadvaavvmqeglahiclvtps  155 (385)
+                      ..|.++|+|.++++++.   ..+|++.+.++.++...+. +|+.|++.||..++....+  ++||+++.+.+.|+.+.+.
+T Consensus        89 ~~glaif~~~~~~~~~~---~~~~~l~~~l~~~v~~~~~~v~~~~~l~pL~~~~~~~~~--~~vl~ld~~~~~~~~~~g~  163 (437)
+T Mp3g07100.1      89 PNGLVLYTGTIVTDDGK---EKKVTIDFEPFKPINASLYLCDNKFHTEALNELLESDDK--FGFIVMDGNGTLFGTLSGN  163 (437)
+Confidence            46899999998777665   5789999999999999887 8999999999999987766  9999999999999999888
+
+
+Q sp|Q9BRX2|PELO  156 MTLTRAKVEVNIPRKRK-GNCS------QHDRALERFYEQVVQAIQRHIH-----FDVVKCILVASPGFVREQFC--DYL  221 (385)
+Q Consensus       156 mtltrakvevniprkrk-gncs------qhdralerfyeqvvqaiqrhih-----fdvvkcilvaspgfvreqfc--dyl  221 (385)
+                      ..+....+....+++.. ++++      +.++..++||+++++.|.+++.     ..+..+|||+|+......|+  ..+
+T Consensus       164 ~~~~~~~~~~~~~~~~~~gg~~~~~~~r~~e~~~~~~~~~v~~~l~~~~~~~~~~~~~~~~lilaG~~~~~~~f~~~~~l  243 (437)
+T Mp3g07100.1     164 TREVLHKFTVDLPKKHGRGGQSALRFARLRMEKRHNYVRKTAELATQFFVNPATSQPNVAGLILAGSADFKTELSQSDMF  243 (437)
+Confidence            87766666666665544 3332      3456788999999999999885     56778999999999999999  667
+
+
+Q sp|Q9BRX2|PELO  222 FQQAVKTDNKLLLENRSKFL-QVHASSGHKYSLKEALCDPTVASRLSDTKAAGEVKALDDFYKMLQHEPDRAFYGLKQVE  300 (385)
+Q Consensus       222 fqqavktdnklllenrskfl-qvhassghkyslkealcdptvasrlsdtkaagevkalddfykmlqhepdrafyglkqve  300 (385)
+                      ++.+.           .+++ ..+.+.++..++.|+++.  +.+++++.+..++.+++++|.+.++++++++++|+++|+
+T Consensus       244 ~~~l~-----------~~ii~~~~~~~~~~~~~~ei~~~--v~~~l~~~~~~~~~~~~~~~~~~~~~~~~~~~~G~~~v~  310 (437)
+T Mp3g07100.1     244 DPRLQ-----------AKVLNVVDVSYGGENGFSQAIEL--SAEILSNVKFIQEKRLIGKYFEEISQDTGKYVFGIEDTL  310 (437)
+Confidence            66543           5555 556666656789999987  999999999999999999999999997679999999999
+
+
+Q sp|Q9BRX2|PELO  301 KANEAMAIDTLLISDELFRH------------------------------QDV-------ATRSRYVRLVDSVKENAGTV  343 (385)
+Q Consensus       301 kaneamaidtllisdelfrh------------------------------qdv-------atrsryvrlvdsvkenagtv  343 (385)
+                      +|+++|||++|+|++++...                              +.|       ...+.+++|++.++++||+|
+T Consensus       311 ~A~~~G~v~~Llv~~~~~~~g~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~l~~~a~~~g~~v  390 (437)
+T Mp3g07100.1     311 KALEMGAVETLIVWESLEVNRYTLKNTTTAEIVIKHLNKDQEADQSNFRDQETQAELEVQEKTSLLEWFANEYKRFGCTL  390 (437)
+Confidence            99999999999999998643                              111       22467899999999999999
+
+
+Q sp|Q9BRX2|PELO  344 RIFSSLHVSGEQ-LSQLTGVAAILRFPVPELSDQEGDSSSE  383 (385)
+Q Consensus       344 rifsslhvsgeq-lsqltgvaailrfpvpelsdqegdssse  383 (385)
+                      ++++.+++.|.+ |..+|||||+|||+++..+.+|++++++
+T Consensus       391 ~~v~~~~~~~~~~l~~~ggiaAlLRy~~~~~~~~~~~~~~~  431 (437)
+T Mp3g07100.1     391 EFVTNKSQEGSQFCRGFGGIGGILRYQLDMRTFDELSDDDG  431 (437)
+Confidence            999999887877 7999999999999999999999998764
+
+
+No 3
+>Mp4g06640.1
+Probab=98.95  E-value=1.8e-13  Score=116.02  Aligned_cols=290  Identities=16%  Similarity=0.190  Sum_probs=247.4  Template_Neff=9.600
+
+Q sp|Q9BRX2|PELO   76 SQACQLRVKGTNIQENEYVKMGAYHTIELEPNRQFTLAKK-QWDSVVLERIEQACDPAWSADVAAVVMQEGLAHICLVTP  154 (385)
+Q Consensus        76 sqacqlrvkgtniqeneyvkmgayhtielepnrqftlakk-qwdsvvlerieqacdpawsadvaavvmqeglahiclvtp  154 (385)
+                      +..|.++|.|.+++.++.   +.+|++.+.++.++...+. +|+.|+++||..+.....+  ++||++|.+.+.++.+.+
+T Consensus        88 ~~~G~aif~~~~~~~~~~---~~~~~l~~~l~~~v~~~~~~v~~~~~l~pL~~~~~~~~~--~~vl~ld~~~~~~~~~~~  162 (437)
+T Mp4g06640.1      88 PTNGLVLYTGTIVTDDGK---EKKVTIDFEPFKPINASLYLCDNKFHTEALNELLDSDDK--FGFIVMDGNGTLFGTLSG  162 (437)
+Confidence            457899999987665565   6789999999999999887 8999999999999987766  999999999999999998
+
+
+Q sp|Q9BRX2|PELO  155 SMTLTRAKVEVNIPRKRK-GNCS------QHDRALERFYEQVVQAIQRHIH-----FDVVKCILVASPGFVREQFC--DY  220 (385)
+Q Consensus       155 smtltrakvevniprkrk-gncs------qhdralerfyeqvvqaiqrhih-----fdvvkcilvaspgfvreqfc--dy  220 (385)
+                      ..++....+...++++++ ++++      +.++..++||+.+++.+.+++.     ..++.+|||+|+...+..|+  ..
+T Consensus       163 ~~~~~~~~~~~~~~~~~~~gg~~~~~~~r~~~e~~~~f~~~v~~~l~~~~~~~~~~~~~~~~lil~G~~~~~~~~~~~~~  242 (437)
+T Mp4g06640.1     163 NTREVLHKFTVDLPKKHGRGGQSALRFARLRMEKRHNYVRKTAELATQFYVNPATSQPNVSGLILAGSADFKTELSQSDM  242 (437)
+Confidence            888777777777776654 3322      3456789999999999999986     66778999999999999998  66
+
+
+Q sp|Q9BRX2|PELO  221 LFQQAVKTDNKLLLENRSKFL-QVHASSGHKYSLKEALCDPTVASRLSDTKAAGEVKALDDFYKMLQHEPDRAFYGLKQV  299 (385)
+Q Consensus       221 lfqqavktdnklllenrskfl-qvhassghkyslkealcdptvasrlsdtkaagevkalddfykmlqhepdrafyglkqv  299 (385)
+                      ++..++           .+++ .+..+.++..++.++++.  +++++++.+..++.+++++|.+.++++++++++|+++|
+T Consensus       243 l~~~l~-----------~~v~~~~~~~~~~~~~~~ei~~~--v~~~l~~~~~~~e~~l~~~~~~~~~~~~~~~~~G~~~v  309 (437)
+T Mp4g06640.1     243 FDQRLQ-----------SKVLNVVDVSYGGENGFNQAIEL--SAEILANVKFIQEKRLIGKYFEEISLDTGKYVFGIDDT  309 (437)
+Confidence            665543           5555 556666656789999988  99999999999999999999999999667999999999
+
+
+Q sp|Q9BRX2|PELO  300 EKANEAMAIDTLLISDELFRH------------------------------QDV-------ATRSRYVRLVDSVKENAGT  342 (385)
+Q Consensus       300 ekaneamaidtllisdelfrh------------------------------qdv-------atrsryvrlvdsvkenagt  342 (385)
+                      ++|++.|+|++|||++++...                              |.|       ...+.+++|++.|+++||+
+T Consensus       310 ~~A~~~g~v~~Llv~~~~~~~g~~~~~~~~~~~~~~~~~~~~~~~~~~~~~p~~~~~~~~~~~~d~~~~li~~a~~~g~~  389 (437)
+T Mp4g06640.1     310 LKALELGAVEILIVWENLEVNRYLLKNSVTGELVIKHLQKEGEADLSNFRDVATNADLEVVEKLSLLEWFANEYRRFGCT  389 (437)
+Confidence            999999999999999998653                              111       2357789999999999999
+
+
+Q sp|Q9BRX2|PELO  343 VRIFSSLHVSGEQ-LSQLTGVAAILRFPVPELSDQEGDSSSE  383 (385)
+Q Consensus       343 vrifsslhvsgeq-lsqltgvaailrfpvpelsdqegdssse  383 (385)
+                      |++|+.++++|++ |..+|||||+|||+++..++.|++++|+
+T Consensus       390 v~~v~~~~~~~~~~l~~~ggiaAiLRy~~~~~~~~~~~~~~~  431 (437)
+T Mp4g06640.1     390 LEFVTNKSQEGSQFCRGFGGIGGILRYQLDMRTFDELSDEEL  431 (437)
+Confidence            9999999888877 7999999999999999999999999875
+
+
+No 4
+>Mp3g03710.1
+Probab=11.88  E-value=44  Score=32.46  Aligned_cols=15  Identities=40%  Similarity=0.789  Sum_probs=10.8  Template_Neff=2.900
+
+Q sp|Q9BRX2|PELO  181 ALERFYEQVVQAIQR  195 (385)
+Q Consensus       181 alerfyeqvvqaiqr  195 (385)
+                      .+.+||..++..+..
+T Consensus       571 sLeRFYEqLC~LVE~  585 (673)
+T Mp3g03710.1     571 SIRRFYERVCTFIDH  585 (673)
+Confidence            467888888876544
+
+
+No 5
+>Mp2g19420.1
+Probab=9.00  E-value=64  Score=23.46  Aligned_cols=9  Identities=22%  Similarity=0.689  Sum_probs=3.6  Template_Neff=7.300
+
+Q sp|Q9BRX2|PELO  184 RFYEQVVQA  192 (385)
+Q Consensus       184 rfyeqvvqa  192 (385)
+                      .+|+.+...
+T Consensus        29 ~LYR~~lR~   37 (137)
+T Mp2g19420.1      29 EFFREACRA   37 (137)
+Confidence            344444333
+
+
+No 6
+>Mp2g11340.1
+Probab=8.32  E-value=72  Score=25.88  Aligned_cols=6  Identities=17%  Similarity=0.495  Sum_probs=2.2  Template_Neff=8.000
+
+Q sp|Q9BRX2|PELO  203 KCILVA  208 (385)
+Q Consensus       203 kcilva  208 (385)
+                      +.|+.+
+T Consensus        77 ~~I~~~   82 (329)
+T Mp2g11340.1      77 TAVICA   82 (329)
+Confidence            333333
+
+
+No 7
+>Mp5g07510.1
+Probab=8.25  E-value=72  Score=25.56  Aligned_cols=34  Identities=29%  Similarity=0.493  Sum_probs=0.0  Template_Neff=1.100
+
+Q sp|Q9BRX2|PELO  147 AHICLVTPSMTLTRAKVEVNIPRKRKGNCSQHDRAL  182 (385)
+Q Consensus       147 ahiclvtpsmtltrakvevniprkrkgncsqhdral  182 (385)
+                      +.+|...|+..+...|  +|+||-|...|--..|||
+T Consensus         4 ~~~~~~~~~~~~gegk--inlprmrrtrcfldsral   37 (146)
+T Mp5g07510.1       4 YPLQQTSPMCETGEGK--INLPRMRRTRCFLDSRAL   37 (146)
+
+
+No 8
+>Mp1g22930.1
+Probab=7.97  E-value=76  Score=23.98  Aligned_cols=37  Identities=19%  Similarity=0.266  Sum_probs=0.0  Template_Neff=10.300
+
+Q sp|Q9BRX2|PELO  311 LLISDELFRHQDVATRSRYVRLVDSVKENAGTVRIFS  347 (385)
+Q Consensus       311 llisdelfrhqdvatrsryvrlvdsvkenagtvrifs  347 (385)
+                      +++-||.+.+.|..+.....+++..+.....++-+.+
+T Consensus       276 llilDep~~gLd~~~~~~l~~~l~~l~~~~~~ii~~t  312 (358)
+T Mp1g22930.1     276 MAILDEIDSGLDVDALRDVAAAVNGLRKSDNAVLMIT  312 (358)
+
+
+No 9
+>Mp3g01240.1
+Probab=6.78  E-value=94  Score=21.50  Aligned_cols=18  Identities=61%  Similarity=0.914  Sum_probs=0.0  Template_Neff=1.000
+
+Q sp|Q9BRX2|PELO  352 SGEQ-LSQLTGVAAILRFP  369 (385)
+Q Consensus       352 sgeq-lsqltgvaailrfp  369 (385)
+                      |||| |||..|-..+|-||
+T Consensus         7 sgeqflsqasghpnllpfp   25 (52)
+T Mp3g01240.1       7 SGEQFLSQASGHPNLLPFP   25 (52)
+
+
+No 10
+>Mp5g03830.1
+Probab=6.60  E-value=97  Score=24.00  Aligned_cols=23  Identities=48%  Similarity=0.627  Sum_probs=0.0  Template_Neff=1.000
+
+Q sp|Q9BRX2|PELO  158 LTRAKVEVNIPRKRKGNCSQHDR  180 (385)
+Q Consensus       158 ltrakvevniprkrkgncsqhdr  180 (385)
+                      |.||...|..-||.-.|.||.||
+T Consensus        47 lerapldvamrrkdvrnvsqkdr   69 (116)
+T Mp5g03830.1      47 LERAPLDVAMRRKDVRNVSQKDR   69 (116)
+
+
