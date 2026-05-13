@@ -4,22 +4,22 @@ End-user companion to the build pipeline at
 [github.com/Papareddy/hhdb_marchantia](https://github.com/Papareddy/hhdb_marchantia).
 
 > **Zenodo DOI: coming soon.** Public distribution via Zenodo is planned but not yet active. Until then:
-> - **Dağdaş-lab users**: the DB is already on bwHPC SDS storage — see [§ For Dağdaş-lab users](#for-dağdaş-lab-users) below.
+> - **Dagdas-lab users**: the DB is already on bwHPC SDS storage — see [§ For Dagdas-lab users](#for-dagdas-lab-users) below.
 > - **External users**: please contact [ranjith.bbt@gmail.com](mailto:ranjith.bbt@gmail.com) for a direct copy of the tarball until the Zenodo record is published.
 
 ---
 
-## For Dağdaş-lab users
+## For Dagdas-lab users
 
 The DB is **already extracted and ready to query** on bwHPC SDS:
 
 ```
 /mnt/sds-hd/sd25l008/resources/marchantia_hhdb_v7.1/
-├── db_v1/                                          ← initial build (97.55 % coverage, 17,565/18,007 proteins)
-│   └── marchantia_v7.1_{a3m,hhm,cs219}.{ffdata,ffindex}
-└── db_v1.1/                                        ← retry with longer timeouts (≥99.4 % coverage, ETA tomorrow)
+└── db_v1.1/                                        ← USE THIS  (≥99.4 % coverage)
     └── marchantia_v7.1_{a3m,hhm,cs219}.{ffdata,ffindex}
 ```
+
+> `db_v1/` (97.55 % coverage, initial build) currently sits alongside `db_v1.1/` as a transitional safety copy. **Always query against `db_v1.1/`.** Once v1.1 is fully validated, `db_v1/` will be removed.
 
 To query from any bwHPC node that has SDS mounted:
 
@@ -27,18 +27,21 @@ To query from any bwHPC node that has SDS mounted:
 # Activate any conda env with hh-suite 3.3.0
 # (or: mamba create -n hhq -c bioconda hhsuite=3.3.0 && conda activate hhq)
 export HHLIB=$CONDA_PREFIX
+DB=/mnt/sds-hd/sd25l008/resources/marchantia_hhdb_v7.1/db_v1.1/marchantia_v7.1
 
-# Query your factor of interest:
-hhsearch \
-    -i your_factor.fa \
-    -d /mnt/sds-hd/sd25l008/resources/marchantia_hhdb_v7.1/db_v1.1/marchantia_v7.1 \
-    -o your_factor.hhr \
-    -cpu 4
+# Single query:
+hhsearch -i your_factor.fa -d "$DB" -o your_factor.hhr -cpu 4
+
+# Or via the bundled wrappers:
+./query.sh examples/AtATG5.fa                              # single protein
+./batch_query.sh examples/rqc_batch results/rqc_batch      # whole folder
 ```
 
-(Use `db_v1` until `db_v1.1` is reported complete in the build pipeline's run report.)
+See [`examples/README.md`](examples/README.md) for the bundled
+single-query (`AtATG5.fa`) and multi-query (`rqc_batch/` — 6 conserved
+RQC factors) test sets, with expected top hits in
+[`examples/rqc_batch/EXPECTED_TOP_HITS.tsv`](examples/rqc_batch/EXPECTED_TOP_HITS.tsv).
 
-For batch queries, see [`batch_query.sh`](batch_query.sh).
 For interpretation of the `.hhr` output, see [`docs/INTERPRETATION.md`](docs/INTERPRETATION.md).
 
 ## Input FASTA — what hhsearch expects
@@ -80,7 +83,7 @@ conda activate marchantia_hhdb
 make fetch ZENODO_RECORD=<doi-number>
 
 # 3. query a factor of interest
-./query.sh examples/your_factor.fa
+./query.sh examples/AtATG5.fa
 ```
 
 ---
@@ -96,7 +99,10 @@ marchantia_hhdb_user/
 ├── query.sh               single-protein hhsearch wrapper
 ├── batch_query.sh         loop over a dir of FASTAs (parallel via GNU parallel)
 ├── examples/
-│   └── README.md          add your own .fa files here
+│   ├── AtATG5.fa           single-query test (autophagy factor; expected Mp1g12840.1)
+│   ├── rqc_batch/          six conserved RQC factors (PELO/HBS1L/NEMF/LTN1/ABCE1/ZNF598)
+│   ├── rqc_batch/EXPECTED_TOP_HITS.tsv
+│   └── README.md
 └── docs/
     ├── FASTA_FORMAT.md    input requirements, gotchas, multi-FASTA splitting
     └── INTERPRETATION.md  how to read .hhr output + threshold guidance
