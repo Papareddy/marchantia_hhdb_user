@@ -40,12 +40,12 @@ rqc_batch/
 
 Run the batch (two equivalent ways; output dir defaults to `results/<basename of input>`):
 ```bash
-# A. as a directory of single-FASTAs (one record per file)
-./batch_query.sh examples/rqc_batch              # -> results/rqc_batch/
+# A. as a single multi-FASTA file (auto-split internally; UniProt headers detected)
+#    Bundled as examples/my_rqc_factors.fasta — same 6 sequences, one file
+./batch_query.sh examples/my_rqc_factors.fasta   # -> results/my_rqc_factors/
 
-# B. as a single multi-FASTA file (auto-split internally; UniProt headers detected)
-cat examples/rqc_batch/*.fa > /tmp/rqc_multi.fa
-./batch_query.sh /tmp/rqc_multi.fa               # -> results/rqc_multi/
+# B. as a directory of single-FASTAs (one record per file)
+./batch_query.sh examples/rqc_batch              # -> results/rqc_batch/
 ```
 
 Each produces, in the output dir:
