@@ -41,6 +41,28 @@ hhsearch \
 For batch queries, see [`batch_query.sh`](batch_query.sh).
 For interpretation of the `.hhr` output, see [`docs/INTERPRETATION.md`](docs/INTERPRETATION.md).
 
+## Input FASTA — what hhsearch expects
+
+**Line width doesn't matter** — wrap at any width or one long line. But:
+
+| Quirk | Behavior |
+|---|---|
+| **Multi-FASTA query** (>1 `>` record) | hhsearch processes ONLY the first. Rest ignored silently. **Split first.** |
+| Trailing `*` (stop codon) | Tolerated (may warn). |
+| `U` (selenocysteine) | Silently → `C`. |
+| `B/Z/J` (ambiguity codes) | Treated as `X`. |
+| Spaces / numbers / tabs in sequence | Stripped. |
+| Windows line endings `\r\n` | If "no input file" error → `dos2unix your.fa`. |
+| Lowercase residues | Treated as uppercase (different meaning in A3M only). |
+| DNA query | Runs, gives nonsense — needs protein. |
+| Very short query (<30 AA) | Results unreliable; ≥50 AA recommended. |
+
+Quick check before searching:
+```bash
+grep -c '^>' your.fa    # must be 1 (else only first record is searched)
+```
+Full details + split helpers + parallel batch loop: **[`docs/FASTA_FORMAT.md`](docs/FASTA_FORMAT.md)**.
+
 ---
 
 ## Three-command setup (for everyone else, after Zenodo is live)
@@ -76,6 +98,7 @@ marchantia_hhdb_user/
 ├── examples/
 │   └── README.md          add your own .fa files here
 └── docs/
+    ├── FASTA_FORMAT.md    input requirements, gotchas, multi-FASTA splitting
     └── INTERPRETATION.md  how to read .hhr output + threshold guidance
 ```
 
