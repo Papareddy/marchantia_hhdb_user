@@ -10,10 +10,10 @@ expected.
 
 ```bash
 ./query.sh examples/AtATG5.fa
-# Produces 3 files next to the input:
-#   examples/AtATG5.hhr           raw hhsearch output (full alignments)
-#   examples/AtATG5.hits.tsv      parsed top-10 hits  (machine-readable)
-#   examples/AtATG5.pdf           figure: bar chart + coverage map
+# Produces 3 files in results/ (default output dir):
+#   results/AtATG5.hhr           raw hhsearch output (full alignments)
+#   results/AtATG5.hits.tsv      parsed top-10 hits  (machine-readable)
+#   results/AtATG5.pdf           figure: bar chart + coverage map
 #
 # expected top hit: Mp1g12840.1   Prob=100.0   E-value=3.8e-80
 ```
@@ -38,17 +38,17 @@ rqc_batch/
 └── EXPECTED_TOP_HITS.tsv          expected Marchantia orthologs + scores
 ```
 
-Run the batch (two equivalent ways):
+Run the batch (two equivalent ways; output dir defaults to `results/<basename of input>`):
 ```bash
 # A. as a directory of single-FASTAs (one record per file)
-./batch_query.sh examples/rqc_batch results/rqc_batch
+./batch_query.sh examples/rqc_batch              # -> results/rqc_batch/
 
 # B. as a single multi-FASTA file (auto-split internally; UniProt headers detected)
 cat examples/rqc_batch/*.fa > /tmp/rqc_multi.fa
-./batch_query.sh /tmp/rqc_multi.fa results/rqc_batch
+./batch_query.sh /tmp/rqc_multi.fa               # -> results/rqc_multi/
 ```
 
-Each produces, in `results/rqc_batch/`:
+Each produces, in the output dir:
 - `<query>.hhr` / `.hits.tsv` / `.pdf`  — one set per protein (same shape as single-query mode)
 - `SUMMARY.tsv` — one row per query with top hit + scores
 - `SUMMARY.pdf` — aggregate horizontal bar chart of best-hit probabilities

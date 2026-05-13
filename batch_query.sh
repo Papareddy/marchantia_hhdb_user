@@ -4,11 +4,15 @@
 # Plus an aggregate summary: <outdir>/SUMMARY.tsv + <outdir>/SUMMARY.pdf
 #
 # Usage:
-#   ./batch_query.sh <input> <output_dir> [PARALLEL_JOBS]
+#   ./batch_query.sh <input> [output_dir] [PARALLEL_JOBS]
 #
 #   <input> can be either:
 #     - a DIRECTORY of single-record .fa/.fasta files (one protein per file), or
 #     - a single MULTI-FASTA file (>1 record); auto-split into <outdir>/_split/
+#
+#   [output_dir] defaults to: results/<basename of input, extension stripped>
+#     e.g.  ./batch_query.sh examples/rqc_batch        -> results/rqc_batch/
+#           ./batch_query.sh my_queries.fa             -> results/my_queries/
 #
 # Env:    THREADS  (cpus per hhsearch invocation; default 2)
 #         TOP      (top-N hits to parse + plot per query; default 10)
@@ -16,8 +20,12 @@
 
 set -euo pipefail
 
-INPUT=${1:?usage: $0 <input_dir_OR_multifasta> <output_dir> [PARALLEL_JOBS]}
-OUTDIR=${2:?usage: $0 <input_dir_OR_multifasta> <output_dir> [PARALLEL_JOBS]}
+INPUT=${1:?usage: $0 <input_dir_OR_multifasta> [output_dir] [PARALLEL_JOBS]}
+# Default output dir: results/<basename of input, .fa/.fasta stripped>
+_in_base=$(basename "$INPUT")
+_in_base=${_in_base%.fa}
+_in_base=${_in_base%.fasta}
+OUTDIR=${2:-results/${_in_base}}
 JOBS=${3:-$(( $(nproc 2>/dev/null || echo 8) / 2 ))}
 THREADS=${THREADS:-2}
 TOP=${TOP:-10}

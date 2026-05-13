@@ -3,7 +3,7 @@
 # ONE command -> .hhr (raw) + .hits.tsv (parsed top hits) + .pdf (figure).
 #
 # Usage:
-#   ./query.sh <query.fa>                 -> writes <query>.hhr/.hits.tsv/.pdf next to the FASTA
+#   ./query.sh <query.fa>                 -> writes results/<query>.hhr/.hits.tsv/.pdf
 #   ./query.sh <query.fa> <out_prefix>    -> writes <prefix>.hhr/.hits.tsv/.pdf
 #   THREADS=8 ./query.sh ...              -> override CPU thread count
 #   TOP=20    ./query.sh ...              -> override top-N hits to keep (default 10)
@@ -12,7 +12,12 @@
 set -euo pipefail
 
 QUERY=${1:?usage: $0 <query.fa> [output_prefix]}
-PREFIX=${2:-${QUERY%.*}}
+# Default output prefix: results/<basename of query, .fa/.fasta stripped>
+_q_base=$(basename "$QUERY")
+_q_base=${_q_base%.fa}
+_q_base=${_q_base%.fasta}
+PREFIX=${2:-results/${_q_base}}
+mkdir -p "$(dirname "$PREFIX")"
 DB=${MARCHANTIA_HHDB:-db/marchantia_v7.1}
 THREADS=${THREADS:-4}
 TOP=${TOP:-10}

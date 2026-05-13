@@ -33,16 +33,18 @@ export MARCHANTIA_HHDB=/mnt/sds-hd/sd25l008/resources/marchantia_hhdb_v7.1/db_v1
 
 # Single query — one command, gets you raw .hhr + parsed .tsv + .pdf figure:
 ./query.sh examples/AtATG5.fa
-#   -> examples/AtATG5.hhr        full hhsearch output
-#   -> examples/AtATG5.hits.tsv   top-10 hits, tab-separated
-#   -> examples/AtATG5.pdf        figure (bar chart + coverage map)
+#   -> results/AtATG5.hhr        full hhsearch output
+#   -> results/AtATG5.hits.tsv   top-10 hits, tab-separated
+#   -> results/AtATG5.pdf        figure (bar chart + coverage map)
 
-# Batch query (multi-FASTA OR directory of single-FASTAs):
-./batch_query.sh examples/rqc_batch results/rqc_batch       # input = directory
-./batch_query.sh my_queries.fa     results/my_queries        # input = multi-FASTA (auto-splits)
-#   -> results/<id>.{hhr,hits.tsv,pdf}   one set per protein
-#   -> results/SUMMARY.tsv               one row per query (top hit)
-#   -> results/SUMMARY.pdf               aggregate top-hit figure
+# Batch query (multi-FASTA OR directory of single-FASTAs).
+# Output dir is optional — defaults to results/<basename of input>:
+./batch_query.sh examples/rqc_batch                          # -> results/rqc_batch/
+./batch_query.sh my_queries.fa                               # -> results/my_queries/  (auto-splits multi-FASTA)
+./batch_query.sh examples/rqc_batch /my/custom/outdir        # explicit outdir still works
+#   -> <outdir>/<id>.{hhr,hits.tsv,pdf}   one set per protein
+#   -> <outdir>/SUMMARY.tsv               one row per query (top hit)
+#   -> <outdir>/SUMMARY.pdf               aggregate top-hit figure
 ```
 
 See [`examples/README.md`](examples/README.md) for the bundled
