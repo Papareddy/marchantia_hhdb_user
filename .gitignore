@@ -1,7 +1,13 @@
+.DS_Store
+__pycache__/
+*.pyc
+
+# DB extract location (large)
 db/
+
+# user query outputs — keep example outputs in repo but not user-generated ones
+results/
+
+# tarballs / md5s pulled by `make fetch`
 *.tar.gz
 *.tar.gz.md5
-results/
-*.hhr
-*.a3m
-.snakemake/
