@@ -2,25 +2,25 @@ Query         sp|Q9BRX2|PELO_HUMAN Protein pelota homolog OS=Homo sapiens OX=960
 Match_columns 385
 No_of_seqs    1 out of 1
 Neff          1
-Searched_HMMs 17567
-Date          Wed May 13 10:15:07 2026
-Command       hhsearch -i examples/rqc_batch/PELO.fa -d /mnt/sds-hd/sd25l008/resources/marchantia_hhdb_v7.1/db_v1/marchantia_v7.1 -o user_demo/batch_out/PELO.hhr -cpu 2 -v 0 
+Searched_HMMs 18007
+Date          Fri May 15 11:28:01 2026
+Command       hhsearch -i examples/rqc_batch/PELO.fa -d /mnt/sds-hd/sd25l008/resources/marchantia_hhdb_v7.1/db_v1.1/marchantia_v7.1 -o results/rqc_v1_1/PELO.hhr -cpu 2 -v 0 
 
  No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
-  1 Mp1g11870.1                    100.0 4.8E-59 2.7E-63  391.6   0.0  377    1-377     1-377 (378)
-  2 Mp3g07100.1                     99.0 4.3E-14 2.4E-18  119.5   0.0  289   77-383    89-431 (437)
-  3 Mp4g06640.1                     98.9 1.8E-13   1E-17  116.0   0.0  290   76-383    88-431 (437)
-  4 Mp3g03710.1                     11.9      44  0.0025   32.5   0.0   15  181-195   571-585 (673)
-  5 Mp2g19420.1                      9.0      64  0.0037   23.5   0.0    9  184-192    29-37  (137)
-  6 Mp2g11340.1                      8.3      72  0.0041   25.9   0.0    6  203-208    77-82  (329)
-  7 Mp5g07510.1                      8.3      72  0.0041   25.6   0.0   34  147-182     4-37  (146)
-  8 Mp1g22930.1                      8.0      76  0.0043   24.0   0.0   37  311-347   276-312 (358)
-  9 Mp3g01240.1                      6.8      94  0.0053   21.5   0.0   18  352-369     7-25  (52)
- 10 Mp5g03830.1                      6.6      97  0.0055   24.0   0.0   23  158-180    47-69  (116)
+  1 Mp1g11870.1                    100.0 4.9E-59 2.7E-63  391.6   0.0  377    1-377     1-377 (378)
+  2 Mp3g07100.1                     99.0 4.4E-14 2.4E-18  119.5   0.0  289   77-383    89-431 (437)
+  3 Mp4g06640.1                     98.9 1.9E-13   1E-17  116.0   0.0  290   76-383    88-431 (437)
+  4 Mp3g03710.1                     11.9      45  0.0025   32.5   0.0   15  181-195   571-585 (673)
+  5 Mp2g19420.1                      9.0      66  0.0037   23.5   0.0    9  184-192    29-37  (137)
+  6 Mp2g11340.1                      8.3      73  0.0041   25.9   0.0    6  203-208    77-82  (329)
+  7 Mp5g07510.1                      8.3      74  0.0041   25.6   0.0   34  147-182     4-37  (146)
+  8 Mp1g22930.1                      8.0      78  0.0043   24.0   0.0   37  311-347   276-312 (358)
+  9 Mp3g01240.1                      6.8      96  0.0053   21.5   0.0   18  352-369     7-25  (52)
+ 10 Mp5g03830.1                      6.6   1E+02  0.0055   24.0   0.0   23  158-180    47-69  (116)
 
 No 1
 >Mp1g11870.1
-Probab=100.00  E-value=4.8e-59  Score=391.62  Aligned_cols=377  Identities=53%  Similarity=0.906  Sum_probs=339.6  Template_Neff=9.600
+Probab=100.00  E-value=4.9e-59  Score=391.62  Aligned_cols=377  Identities=53%  Similarity=0.906  Sum_probs=339.6  Template_Neff=9.600
 
 Q sp|Q9BRX2|PELO    1 MKLVRKNIEKDNAGQVTLVPEEPEDMWHTYNLVQVGDSLRASTIRKVQTESSTGSVGSNRVRTTLTLCVEAIDFDSQACQ   80 (385)
 Q Consensus         1 mklvrkniekdnagqvtlvpeepedmwhtynlvqvgdslrastirkvqtesstgsvgsnrvrttltlcveaidfdsqacq   80 (385)
@@ -64,7 +64,7 @@ Confidence            777788899999999999999999999999999999999999999999998887765
 
 No 2
 >Mp3g07100.1
-Probab=99.04  E-value=4.3e-14  Score=119.51  Aligned_cols=289  Identities=17%  Similarity=0.207  Sum_probs=244.9  Template_Neff=9.700
+Probab=99.04  E-value=4.4e-14  Score=119.51  Aligned_cols=289  Identities=17%  Similarity=0.207  Sum_probs=244.9  Template_Neff=9.700
 
 Q sp|Q9BRX2|PELO   77 QACQLRVKGTNIQENEYVKMGAYHTIELEPNRQFTLAKK-QWDSVVLERIEQACDPAWSADVAAVVMQEGLAHICLVTPS  155 (385)
 Q Consensus        77 qacqlrvkgtniqeneyvkmgayhtielepnrqftlakk-qwdsvvlerieqacdpawsadvaavvmqeglahiclvtps  155 (385)
@@ -108,7 +108,7 @@ Confidence            999999887877 7999999999999999999999998764
 
 No 3
 >Mp4g06640.1
-Probab=98.95  E-value=1.8e-13  Score=116.02  Aligned_cols=290  Identities=16%  Similarity=0.190  Sum_probs=247.4  Template_Neff=9.600
+Probab=98.95  E-value=1.9e-13  Score=116.02  Aligned_cols=290  Identities=16%  Similarity=0.190  Sum_probs=247.4  Template_Neff=9.600
 
 Q sp|Q9BRX2|PELO   76 SQACQLRVKGTNIQENEYVKMGAYHTIELEPNRQFTLAKK-QWDSVVLERIEQACDPAWSADVAAVVMQEGLAHICLVTP  154 (385)
 Q Consensus        76 sqacqlrvkgtniqeneyvkmgayhtielepnrqftlakk-qwdsvvlerieqacdpawsadvaavvmqeglahiclvtp  154 (385)
@@ -152,7 +152,7 @@ Confidence            9999999888877 7999999999999999999999999875
 
 No 4
 >Mp3g03710.1
-Probab=11.88  E-value=44  Score=32.46  Aligned_cols=15  Identities=40%  Similarity=0.789  Sum_probs=10.8  Template_Neff=2.900
+Probab=11.88  E-value=45  Score=32.46  Aligned_cols=15  Identities=40%  Similarity=0.789  Sum_probs=10.8  Template_Neff=2.900
 
 Q sp|Q9BRX2|PELO  181 ALERFYEQVVQAIQR  195 (385)
 Q Consensus       181 alerfyeqvvqaiqr  195 (385)
@@ -164,7 +164,7 @@ Confidence            467888888876544
 
 No 5
 >Mp2g19420.1
-Probab=9.00  E-value=64  Score=23.46  Aligned_cols=9  Identities=22%  Similarity=0.689  Sum_probs=3.6  Template_Neff=7.300
+Probab=9.00  E-value=66  Score=23.46  Aligned_cols=9  Identities=22%  Similarity=0.689  Sum_probs=3.6  Template_Neff=7.300
 
 Q sp|Q9BRX2|PELO  184 RFYEQVVQA  192 (385)
 Q Consensus       184 rfyeqvvqa  192 (385)
@@ -176,7 +176,7 @@ Confidence            344444333
 
 No 6
 >Mp2g11340.1
-Probab=8.32  E-value=72  Score=25.88  Aligned_cols=6  Identities=17%  Similarity=0.495  Sum_probs=2.2  Template_Neff=8.000
+Probab=8.32  E-value=73  Score=25.88  Aligned_cols=6  Identities=17%  Similarity=0.495  Sum_probs=2.2  Template_Neff=8.000
 
 Q sp|Q9BRX2|PELO  203 KCILVA  208 (385)
 Q Consensus       203 kcilva  208 (385)
@@ -188,7 +188,7 @@ Confidence            333333
 
 No 7
 >Mp5g07510.1
-Probab=8.25  E-value=72  Score=25.56  Aligned_cols=34  Identities=29%  Similarity=0.493  Sum_probs=0.0  Template_Neff=1.100
+Probab=8.25  E-value=74  Score=25.56  Aligned_cols=34  Identities=29%  Similarity=0.493  Sum_probs=0.0  Template_Neff=1.100
 
 Q sp|Q9BRX2|PELO  147 AHICLVTPSMTLTRAKVEVNIPRKRKGNCSQHDRAL  182 (385)
 Q Consensus       147 ahiclvtpsmtltrakvevniprkrkgncsqhdral  182 (385)
@@ -199,7 +199,7 @@ T Mp5g07510.1       4 YPLQQTSPMCETGEGK--INLPRMRRTRCFLDSRAL   37 (146)
 
 No 8
 >Mp1g22930.1
-Probab=7.97  E-value=76  Score=23.98  Aligned_cols=37  Identities=19%  Similarity=0.266  Sum_probs=0.0  Template_Neff=10.300
+Probab=7.97  E-value=78  Score=23.98  Aligned_cols=37  Identities=19%  Similarity=0.266  Sum_probs=0.0  Template_Neff=10.300
 
 Q sp|Q9BRX2|PELO  311 LLISDELFRHQDVATRSRYVRLVDSVKENAGTVRIFS  347 (385)
 Q Consensus       311 llisdelfrhqdvatrsryvrlvdsvkenagtvrifs  347 (385)
@@ -210,7 +210,7 @@ T Mp1g22930.1     276 MAILDEIDSGLDVDALRDVAAAVNGLRKSDNAVLMIT  312 (358)
 
 No 9
 >Mp3g01240.1
-Probab=6.78  E-value=94  Score=21.50  Aligned_cols=18  Identities=61%  Similarity=0.914  Sum_probs=0.0  Template_Neff=1.000
+Probab=6.78  E-value=96  Score=21.50  Aligned_cols=18  Identities=61%  Similarity=0.914  Sum_probs=0.0  Template_Neff=1.000
 
 Q sp|Q9BRX2|PELO  352 SGEQ-LSQLTGVAAILRFP  369 (385)
 Q Consensus       352 sgeq-lsqltgvaailrfp  369 (385)
@@ -221,7 +221,7 @@ T Mp3g01240.1       7 SGEQFLSQASGHPNLLPFP   25 (52)
 
 No 10
 >Mp5g03830.1
-Probab=6.60  E-value=97  Score=24.00  Aligned_cols=23  Identities=48%  Similarity=0.627  Sum_probs=0.0  Template_Neff=1.000
+Probab=6.60  E-value=1e+02  Score=24.00  Aligned_cols=23  Identities=48%  Similarity=0.627  Sum_probs=0.0  Template_Neff=1.000
 
 Q sp|Q9BRX2|PELO  158 LTRAKVEVNIPRKRKGNCSQHDR  180 (385)
 Q Consensus       158 ltrakvevniprkrkgncsqhdr  180 (385)

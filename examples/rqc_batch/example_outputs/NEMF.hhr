@@ -2,20 +2,20 @@ Query         sp|O60524|NEMF_HUMAN Ribosome quality control complex subunit NEMF
 Match_columns 1076
 No_of_seqs    1 out of 1
 Neff          1
-Searched_HMMs 17567
-Date          Wed May 13 10:14:46 2026
-Command       hhsearch -i examples/rqc_batch/NEMF.fa -d /mnt/sds-hd/sd25l008/resources/marchantia_hhdb_v7.1/db_v1/marchantia_v7.1 -o user_demo/batch_out/NEMF.hhr -cpu 2 -v 0 
+Searched_HMMs 18007
+Date          Fri May 15 11:28:43 2026
+Command       hhsearch -i examples/rqc_batch/NEMF.fa -d /mnt/sds-hd/sd25l008/resources/marchantia_hhdb_v7.1/db_v1.1/marchantia_v7.1 -o results/rqc_v1_1/NEMF.hhr -cpu 2 -v 0 
 
  No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
   1 Mp1g00940.1                    100.0  2E-157  9E-162 1305.5   0.0 1020    1-1075    2-1198(1212)
   2 Mp2g14070.1                     97.5 1.1E-07 6.3E-12   84.1   0.0  101  534-636     9-115 (215)
-  3 Mp1g14550.1                     15.4      30  0.0017   34.2   0.0   13  610-622   212-224 (386)
-  4 Mp6g08090.1                     10.2      54  0.0031   30.3   0.0   26  273-298   118-143 (177)
-  5 Mp7g09070.1                     10.2      55  0.0031   33.0   0.0   15  267-281   137-151 (1042)
-  6 Mp3g03070.1                      9.6      59  0.0034   31.0   0.0   10   97-106   139-148 (512)
-  7 Mp1g01010.1                      7.5      83  0.0047   31.5   0.0   17   78-94     35-51  (370)
-  8 Mp4g14550.1                      6.8      94  0.0054   29.2   0.0   31  538-569   128-162 (395)
-  9 Mp2g02940.1                      6.2   1E+02  0.0059   27.1   0.0   50  531-585   238-287 (291)
+  3 Mp1g14550.1                     15.4      31  0.0017   34.2   0.0   13  610-622   212-224 (386)
+  4 Mp6g08090.1                     10.2      56  0.0031   30.3   0.0   26  273-298   118-143 (177)
+  5 Mp7g09070.1                     10.2      56  0.0031   33.0   0.0   15  267-281   137-151 (1042)
+  6 Mp3g03070.1                      9.6      61  0.0034   31.0   0.0   10   97-106   139-148 (512)
+  7 Mp1g01010.1                      7.5      85  0.0047   31.5   0.0   17   78-94     35-51  (370)
+  8 Mp4g14550.1                      6.8      96  0.0054   29.2   0.0   31  538-569   128-162 (395)
+  9 Mp2g02940.1                      6.2 1.1E+02  0.0059   27.1   0.0   50  531-585   238-287 (291)
  10 Mp8g15310.1                      6.0 1.1E+02  0.0063   26.0   0.0   26  355-380    61-86  (110)
 
 No 1
@@ -172,7 +172,7 @@ Confidence            555 58999999876  456655555433
 
 No 3
 >Mp1g14550.1
-Probab=15.39  E-value=30  Score=34.19  Aligned_cols=13  Identities=46%  Similarity=1.257  Sum_probs=10.2  Template_Neff=5.700
+Probab=15.39  E-value=31  Score=34.19  Aligned_cols=13  Identities=46%  Similarity=1.257  Sum_probs=10.2  Template_Neff=5.700
 
 Q sp|O60524|NEMF  610 TSAWWVYHHQVSK  622 (1076)
 Q Consensus       610 tsawwvyhhqvsk  622 (1076)
@@ -184,7 +184,7 @@ Confidence            4578999998864
 
 No 4
 >Mp6g08090.1
-Probab=10.18  E-value=54  Score=30.32  Aligned_cols=26  Identities=27%  Similarity=0.418  Sum_probs=17.5  Template_Neff=3.200
+Probab=10.18  E-value=56  Score=30.32  Aligned_cols=26  Identities=27%  Similarity=0.418  Sum_probs=17.5  Template_Neff=3.200
 
 Q sp|O60524|NEMF  273 FHPFLFSQHSQCPYIEFESFDKAVDE  298 (1076)
 Q Consensus       273 fhpflfsqhsqcpyiefesfdkavde  298 (1076)
@@ -196,7 +196,7 @@ Confidence            34455666666678888888877543
 
 No 5
 >Mp7g09070.1
-Probab=10.15  E-value=55  Score=32.96  Aligned_cols=15  Identities=13%  Similarity=0.782  Sum_probs=8.4  Template_Neff=9.900
+Probab=10.15  E-value=56  Score=32.96  Aligned_cols=15  Identities=13%  Similarity=0.782  Sum_probs=8.4  Template_Neff=9.900
 
 Q sp|O60524|NEMF  267 ILTYEEFHPFLFSQH  281 (1076)
 Q Consensus       267 iltyeefhpflfsqh  281 (1076)
@@ -208,7 +208,7 @@ Confidence            344666766665543
 
 No 6
 >Mp3g03070.1
-Probab=9.59  E-value=59  Score=31.01  Aligned_cols=10  Identities=20%  Similarity=0.235  Sum_probs=5.3  Template_Neff=8.600
+Probab=9.59  E-value=61  Score=31.01  Aligned_cols=10  Identities=20%  Similarity=0.235  Sum_probs=5.3  Template_Neff=8.600
 
 Q sp|O60524|NEMF   97 RIVDFQFGSD  106 (1076)
 Q Consensus        97 rivdfqfgsd  106 (1076)
@@ -220,7 +220,7 @@ Confidence            4555666543
 
 No 7
 >Mp1g01010.1
-Probab=7.47  E-value=83  Score=31.54  Aligned_cols=17  Identities=6%  Similarity=0.038  Sum_probs=9.6  Template_Neff=3.900
+Probab=7.47  E-value=85  Score=31.54  Aligned_cols=17  Identities=6%  Similarity=0.038  Sum_probs=9.6  Template_Neff=3.900
 
 Q sp|O60524|NEMF   78 CRKHLKSRRLVSAKQLG   94 (1076)
 Q Consensus        78 crkhlksrrlvsakqlg   94 (1076)
@@ -232,7 +232,7 @@ Confidence            56666665555554444
 
 No 8
 >Mp4g14550.1
-Probab=6.76  E-value=94  Score=29.19  Aligned_cols=31  Identities=19%  Similarity=0.393  Sum_probs=25.4  Template_Neff=7.800
+Probab=6.76  E-value=96  Score=29.19  Aligned_cols=31  Identities=19%  Similarity=0.393  Sum_probs=25.4  Template_Neff=7.800
 
 Q sp|O60524|NEMF  538 NYLIIGGRDQQQNEIIVKRYLTPGD----IYVHADL  569 (1076)
 Q Consensus       538 nyliiggrdqqqneiivkryltpgd----iyvhadl  569 (1076)
@@ -244,7 +244,7 @@ Confidence            467777 888888999999988765    9999974
 
 No 9
 >Mp2g02940.1
-Probab=6.24  E-value=1e+02  Score=27.12  Aligned_cols=50  Identities=20%  Similarity=0.195  Sum_probs=0.0  Template_Neff=8.500
+Probab=6.24  E-value=1.1e+02  Score=27.12  Aligned_cols=50  Identities=20%  Similarity=0.195  Sum_probs=0.0  Template_Neff=8.500
 
 Q sp|O60524|NEMF  531 LWFISSENYLIIGGRDQQQNEIIVKRYLTPGDIYVHADLHGATSCVIKNPTGEPI  585 (1076)
 Q Consensus       531 lwfissenyliiggrdqqqneiivkryltpgdiyvhadlhgatscviknptgepi  585 (1076)

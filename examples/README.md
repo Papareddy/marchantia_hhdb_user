@@ -66,12 +66,12 @@ you'd get** by running `./batch_query.sh examples/rqc_batch`:
 | `SUMMARY.tsv`                               | one row per query with top hit + scores        |
 | `SUMMARY.pdf`                               | aggregate horizontal bar chart                 |
 
-Top hits (from the bundled `SUMMARY.tsv`):
-- ABCE1  → Mp6g18410.1   Prob=100   E=1.1e-39   (ribosome splitting / Rli1)
-- HBS1L  → Mp6g18130.1   Prob=100   E=1.1e-73   (PELO partner / Hbs1)
+Top hits (from the bundled `SUMMARY.tsv`, db_v1.1):
+- ABCE1  → Mp8g05210.1   Prob=100   E=5e-105    (ribosome splitting / Rli1)
+- HBS1L  → Mp6g18130.1   Prob=100   E=1.2e-73   (PELO partner / Hbs1)
 - LTN1   → Mp7g07340.1   Prob=100   E=4e-132    (E3 ligase / Ltn1)
 - NEMF   → Mp1g00940.1   Prob=100   E=2e-157    (CAT-tail / Rqc2)
-- PELO   → Mp1g11870.1   Prob=100   E=4.8e-59   (stall recognition / Dom34)
+- PELO   → Mp1g11870.1   Prob=100   E=4.9e-59   (stall recognition / Dom34)
 - ZNF598 → Mp5g21820.1   Prob=100   E=1.1e-53   (collision E3 / Hel2)
 
 Total wall: ~2 min on a 4-cpu node (against the SDS DB).
