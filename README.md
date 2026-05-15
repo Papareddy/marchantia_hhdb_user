@@ -15,7 +15,7 @@ The DB is **already extracted and ready to query** on bwHPC SDS:
 
 ```
 /mnt/sds-hd/sd25l008/resources/marchantia_hhdb_v7.1/
-└── db_v1.1/         ← 18,007 profiles (100 % proteome coverage), validated
+└── db_v1/         ← 18,007 profiles (100 % proteome coverage), validated
     └── marchantia_v7.1_{a3m,hhm,cs219}.{ffdata,ffindex}
 ```
 
@@ -27,7 +27,7 @@ mamba env create -f environment.yml      # installs hh-suite + python + pandas +
 conda activate marchantia_hhdb
 
 export HHLIB=$CONDA_PREFIX
-export MARCHANTIA_HHDB=/mnt/sds-hd/sd25l008/resources/marchantia_hhdb_v7.1/db_v1.1/marchantia_v7.1
+export MARCHANTIA_HHDB=/mnt/sds-hd/sd25l008/resources/marchantia_hhdb_v7.1/db_v1/marchantia_v7.1
 
 # Single query — one command, gets you raw .hhr + parsed .tsv + .pdf figure:
 ./query.sh examples/AtATG5.fa

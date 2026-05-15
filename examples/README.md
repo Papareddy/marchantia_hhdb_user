@@ -54,7 +54,7 @@ Each produces, in the output dir:
 - `SUMMARY.pdf` — aggregate horizontal bar chart of best-hit probabilities
 
 Expected top hits are tracked in [`rqc_batch/EXPECTED_TOP_HITS.tsv`](rqc_batch/EXPECTED_TOP_HITS.tsv).
-A full reference bundle from a real run against `db_v1.1` is committed under
+A full reference bundle from a real run against `db_v1` is committed under
 [`rqc_batch/example_outputs/`](rqc_batch/example_outputs/) — the **exact files
 you'd get** by running `./batch_query.sh examples/rqc_batch`:
 
@@ -66,7 +66,7 @@ you'd get** by running `./batch_query.sh examples/rqc_batch`:
 | `SUMMARY.tsv`                               | one row per query with top hit + scores        |
 | `SUMMARY.pdf`                               | aggregate horizontal bar chart                 |
 
-Top hits (from the bundled `SUMMARY.tsv`, db_v1.1):
+Top hits (from the bundled `SUMMARY.tsv`, db_v1):
 - ABCE1  → Mp8g05210.1   Prob=100   E=5e-105    (ribosome splitting / Rli1)
 - HBS1L  → Mp6g18130.1   Prob=100   E=1.2e-73   (PELO partner / Hbs1)
 - LTN1   → Mp7g07340.1   Prob=100   E=4e-132    (E3 ligase / Ltn1)
